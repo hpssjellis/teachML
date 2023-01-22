@@ -1,4 +1,4 @@
-Version 0.1.0-3
+Version 0.1.0-4
 <H2 Align=center>Teach ML </h2>
 <H3 Align=center>An example of how to train a classroom of students as if they were a Machine Learning Neural Network (Kind of)</h3>
 
@@ -15,9 +15,12 @@ Version 0.1.0-3
 
 
 <input type=button value="add student" onclick="{
-   let my01 = document.createElement('my01')
-   document.getElementById('my01').innerHTML = '<input id=my01text01 type=text value=Cool>'                                                    
-   document.getElementById('myDiv01').append(my01)                                            
+   let my01 = document.createElement('my01')                                                
+   document.getElementById('myDiv01').append(my01)   
+                                                
+   let a01 = '<input id=my01text01 type=text value=Cool>' 
+   let a02 = '<input id=my01text02 type=text value=WOW>' 
+   document.getElementById('my01').innerHTML =  a01 + a02  
 }">
 
 
