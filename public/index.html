@@ -98,9 +98,9 @@ Learnt Count:<input type=text id="myLearntCount" size=3 value=0>, %:<input type=
 
 <input type=text id="myShow"  value="myB1">
 <input type=button value="Show-Objects-value" onclick="{
-  document.getElementById('myDiv02').innerHTML  = document.getElementById(document.getElementById('myShow').value).value + '<br>'  
-  document.getElementById('myDiv02').innerHTML  += document.getElementById(document.getElementById('myShow').value).id + '<br>'                 
-  document.getElementById('myDiv02').innerHTML  += document.getElementById(document.getElementById('myShow').value).name + '<br>'                                      
+  document.getElementById('myDiv02').innerHTML  = 'id.value: ' + document.getElementById(document.getElementById('myShow').value).value + '<br>'  
+  document.getElementById('myDiv02').innerHTML  += 'id.id: ' + document.getElementById(document.getElementById('myShow').value).id + '<br>'                 
+  document.getElementById('myDiv02').innerHTML  += 'id.name: ' + document.getElementById(document.getElementById('myShow').value).name + '<br>'                                      
                                           
 }">
 
@@ -116,7 +116,7 @@ Text example: <input id="myText1" type=text size=70 value="" placeholder="Write 
 
 <input type="button" value="Store Text" onClick="{
    localStorage.setItem('myStoredText', document.getElementById('myText1').value)
-   alert(document.getElementById('myText1').value + ' \nHas been stored')
+  // alert(document.getElementById('myText1').value + ' \nHas been stored')
    document.getElementById('myText1').value = ''
 }">
 
