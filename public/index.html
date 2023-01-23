@@ -1,4 +1,4 @@
-Version 0.4.0-97
+Version 0.4.0-98
 
 <script>
    
@@ -109,11 +109,19 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
    myB[myCount].setAttribute('id', 'myB' + myCount);                   
    myB[myCount].setAttribute('name', 'myBname' + myCount);              
    myB[myCount].setAttribute('value', 'Fred');          
-   myB[myCount].setAttribute('title', 'Name '+myCount);     
-   myB[myCount].setAttribute('Size', '12');                                           
+   myB[myCount].setAttribute('title', 'Name '+myCount);                              
    document.getElementById('myDiv01').appendChild(myB[myCount])  
                                                 
-                                                
+   
+   let myE = new Array(1) 
+   myE[myCount]  = document.createElement('input')   
+   myE[myCount].setAttribute('type', 'text');                             
+   myE[myCount].setAttribute('id', 'myE' + myCount);                   
+   myE[myCount].setAttribute('name', 'myEname' + myCount);              
+   myE[myCount].setAttribute('value', '0');          
+   myE[myCount].setAttribute('title', 'Repeat Count '+myCount);   
+   myE[myCount].setAttribute('Size', '3');                                         
+   document.getElementById('myDiv01').appendChild(myE[myCount])                                                
         
    let myC = new Array(1) 
    myC[myCount]  = document.createElement('input')   
@@ -135,16 +143,7 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
    myD[myCount].setAttribute('title', 'Teach '+myCount);                           
    document.getElementById('myDiv01').appendChild(myD[myCount])                                                
                                                                                             
- 
-   let myE = new Array(1) 
-   myE[myCount]  = document.createElement('input')   
-   myE[myCount].setAttribute('type', 'text');                             
-   myE[myCount].setAttribute('id', 'myE' + myCount);                   
-   myE[myCount].setAttribute('name', 'myEname' + myCount);              
-   myE[myCount].setAttribute('value', '0');          
-   myE[myCount].setAttribute('title', 'Repeat Count '+myCount);   
-   myC[myCount].setAttribute('Size', '3');                                         
-   document.getElementById('myDiv01').appendChild(myE[myCount])                                                    
+                                                  
                                             
                            
                                   
