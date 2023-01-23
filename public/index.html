@@ -1,4 +1,4 @@
-Version 0.1.4-35
+Version 0.2.0-37
 <H2 Align=center>Teach ML </h2>
 <H3 Align=center>An example of how to train a classroom of students as if they were a Machine Learning Neural Network (kind of)</h3>
 
@@ -51,8 +51,24 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
 <div id="myDiv01">...</div>
 
 
+<script>
+  
+function myObjectData(myObject){
+ window.status = 'Please Wait'
+ document.myForm.myText1.value = ''
+ document.myForm.myTextarea.value = ''
+ myLoop = 0
+ for (var prop in myObject){
+    myLoop+=1
+    document.myForm.myTextarea.value+=myObject.name+'.'+prop+'='+myObject[prop]+ '\n'
+    if (myLoop % 3 == 1){
+ window.status += '.'}   
+ }
+ console.log(this.parent.name + '.'+myObject.name)
 
-
+}  
+  
+</script>
 
 
 <br><br><br><br><br>
