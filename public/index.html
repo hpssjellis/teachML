@@ -1,4 +1,4 @@
-Version 0.4.3-110
+Version 0.5.0-111
 
 <script>
    
@@ -97,7 +97,13 @@ Case Sensitive: <input id="myClassName" type=text value="ClassName">
 }"><br>
 <input type=button value="Students Pre-Teach" onclick="{
 
-    alert('Nothing yet')
+   let myMax =  parseInt( document.getElementById('myStudentCount').value )                                          
+   for (let myLoop = 1; myLoop <= myMax; myLoop++){
+      if (parseInt(document.getElementById('myE'+myLoop).value)  >= parseInt(document.getElementById('myC'+myLoop).value){
+           console.log('has learnt)  
+           console.log(myLoop)
+      }                                    
+   }  
 }"><br><br>
 
 <input type=button value="Teach Topic" onclick="{
