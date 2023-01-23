@@ -1,4 +1,4 @@
-Version 0.2.2-53
+Version 0.3.0-54
 <H2 Align=center>Teach ML </h2>
 <H3 Align=center>An example of how to train a classroom of students as if they were a Machine Learning Neural Network (kind of)</h3>
 
@@ -79,7 +79,10 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
 
 <div id="myDiv01"></div><br><br>
 <div id="myDiv02">...</div><br><br>
-
+<input type=button value="Save-to-LocalStorage" onclick="{
+alert()                                 
+                                          
+}">
 
 Learnt Count:<input type=text id="myLearntCount" size=3 value=0>, %:<input type=text id="myPercent" size=3 value=0><br><br>
 
@@ -91,20 +94,6 @@ Learnt Count:<input type=text id="myLearntCount" size=3 value=0>, %:<input type=
 
 
 
-
-<script>
-document.name="myDocument"
-window.name="myWindow"
-  
-function myObjectData(myObject){
-  myLoop = 0
-  for (var prop in myObject){
-    myLoop += 1
-    console.log(myObject.name+'.'+prop+'='+myObject[prop])
-  }  
-}  
-  
-</script>
 
 
 <br><br><br><br><br>
