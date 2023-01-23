@@ -1,4 +1,4 @@
-Version 0.5.0-114
+Version 0.5.0-115
 
 <script>
    
@@ -100,11 +100,11 @@ Case Sensitive: <input id="myClassName" type=text value="ClassName">
    let myTempRepeatsNeeded
    let myTempCount                                                    
    let myMax2 =  parseInt( document.getElementById('myStudentCount').value )                                          
-   for (let myLoop2 = 1; myLoop2 <= myMax; myLoop2++){
+   for (let myLoop2 = 1; myLoop2 <= myMax2; myLoop2++){
        myTempCount  =  parseInt(document.getElementById('myE'+myLoop2).value)
         myTempRepeatsNeeded  = parseInt(document.getElementById('myC'+myLoop2).value)                                            
       if ( myTempCount >= myTempRepeatsNeeded ){
-           console.log('has learnt)  
+           console.log('has learnt')  
            console.log(myLoop2)
       }                                    
    }  
