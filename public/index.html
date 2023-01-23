@@ -1,17 +1,16 @@
-Version 0.3.2-73
+Version 0.3.2-75
 
 <script>
 function myLoadData(){
    myStorage = JSON.parse(localStorage.getItem(document.getElementById('myClassName').value))
    if(myStorage  != null){
-      document.getElementById('myText1').value = JSON.stringify(myStorage,null,'\n') 
-      document.getElementById('myDiv02').innerHTML = JSON.stringify(myStorage,null,'<br>')
+      document.getElementById('myText1').value = JSON.stringify(myStorage) 
+      document.getElementById('myDiv02').innerHTML = JSON.stringify(myStorage, null, '<br>')
       let myInStudents = parseInt(myStorage.amount)
       if (myInStudents > 0) {
          for (let x = 1; x < myInStudents; x++){
             document.getElementById('myAddStudentsButton').click()             
-           // myA[x].setAttribute('value', 'Wild'); 
-            document.getElementById('myA'+x).value = 'wild'
+            document.getElementById('myA'+x).value = 'wild'    
         }     
      }        
   }
@@ -24,11 +23,13 @@ function mySaveData(){
   job: 'Programmer',
   amount: 5,
   skills: [
-    { id: 4200, name: 'Angular' },
-    { id: 3000, name: 'React' },
-    { id: 8080, name: 'Vue' },
+    { id: document.getElementById('myA1').value, name: document.getElementById('myA1').value },
+    { id: document.getElementById('myB1').value, name: document.getElementById('myB1').value },
+    { id: document.getElementById('myC1').value, name: document.getElementById('myC1').value },
   ],
-};
+  };
+   
+   
    localStorage.setItem(document.getElementById('myClassName').value, JSON.stringify(userData) )
 }   
    
@@ -43,10 +44,11 @@ function mySaveData(){
 <h3>Instructions</h3>
 
 
-<input id="myClassName" type=text value="ClassName">
+Case Sensitive: <input id="myClassName" type=text value="ClassName">
 <input type=button value="Load" onclick="myLoadData()">
 <input type=button value="Save" onclick="mySaveData()">
 <br><br><br>
+
 <input type=button value="Teach Topic" onclick="{
   document.getElementById('myTeachCount').value = parseInt(document.getElementById('myTeachCount').value)  + 1                                       
                                           
