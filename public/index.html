@@ -1,4 +1,4 @@
-Version 0.4.2-107
+Version 0.4.2-108
 
 <script>
    
@@ -76,8 +76,9 @@ Case Sensitive: <input id="myClassName" type=text value="ClassName">
     console.log(myToTeach)
     for (let i=0; i < myToTeach.length; i++){
          let z =  parseInt(myToTeach[i]) + 1                                             
+        console.log('z')                                
         console.log(z)
-        console.log('document.getElementById('myE'+z).value')
+        console.log('document.getElementById(myE+z).value')
         console.log(document.getElementById('myE'+z).value)
         document.getElementById('myE'+z).value =  parseInt(document.getElementById('myE'+z).value) + 1  
     }
