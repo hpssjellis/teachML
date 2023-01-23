@@ -1,4 +1,4 @@
-Version 0.3.2-85
+Version 0.3.2-87
 
 <script>
 function myLoadData(){
@@ -13,10 +13,10 @@ function myLoadData(){
         }    
          
          for (let x = 0; x < myInStudents; x++){    
-            document.getElementById('myB'+x).value = myStorage.skills[x,0]        
-            document.getElementById('myC'+x).value = myStorage.skills[x,1]       
-            document.getElementById('myD'+x).value = myStorage.skills[x,2]   
-            document.getElementById('myE'+x).value = myStorage.skills[x,3]   
+            document.getElementById('myB'+x+1).value = myStorage.skills[x].myB        
+            document.getElementById('myC'+x+1).value = myStorage.skills[x].myC       
+            document.getElementById('myD'+x+1).value = myStorage.skills[x].myD   
+            document.getElementById('myE'+x+1).value = myStorage.skills[x].myE   
 
         } 
          
@@ -31,10 +31,10 @@ function mySaveData(){
   job: 'Programmer',
   amount: 5,
   skills: [
-    [ document.getElementById('myB1').value,  document.getElementById('myC1').value,  document.getElementById('myD1').value,  document.getElementById('myE1').value],
-    [ document.getElementById('myB2').value,  document.getElementById('myC2').value,  document.getElementById('myD2').value,  document.getElementById('myE2').value],
-    [ document.getElementById('myB3').value,  document.getElementById('myC3').value,  document.getElementById('myD3').value,  document.getElementById('myE3').value],
-    [ document.getElementById('myB4').value,  document.getElementById('myC4').value,  document.getElementById('myD4').value,  document.getElementById('myE4').value],
+     {myB: document.getElementById('myB1').value, myC:  document.getElementById('myC1').value, myD: document.getElementById('myD1').value, myE: document.getElementById('myE1').value},
+     {myB: document.getElementById('myB2').value, myC:  document.getElementById('myC2').value, myD: document.getElementById('myD2').value, myE: document.getElementById('myE2').value},
+     {myB: document.getElementById('myB3').value, myC:  document.getElementById('myC3').value, myD: document.getElementById('myD3').value, myE: document.getElementById('myE3').value},
+    
   ],
   };
    
