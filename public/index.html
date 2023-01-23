@@ -1,4 +1,4 @@
-Version 0.3.1-67
+Version 0.3.1-68
 
 <script>
 function myLoadData(){
@@ -17,7 +17,16 @@ function myLoadData(){
    
    
 function mySaveData(){
-   localStorage.setItem(document.getElementById('myClassName').value, { 'amount': '4', 'type': 'veggie' })
+   const userData = {
+  job: 'Programmer',
+  amount: '5',
+  skills: [
+    { id: 4200, name: 'Angular' },
+    { id: 3000, name: 'React' },
+    { id: 8080, name: 'Vue' },
+  ],
+};
+   localStorage.setItem(document.getElementById('myClassName').value, JSON.stringify(userData) )
 }   
    
   
