@@ -1,4 +1,4 @@
-Version 0.2.0-38
+Version 0.2.0-40
 <H2 Align=center>Teach ML </h2>
 <H3 Align=center>An example of how to train a classroom of students as if they were a Machine Learning Neural Network (kind of)</h3>
 
@@ -28,18 +28,22 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
    let myA = new Array(1) 
    let myB = new Array(1) 
                                                 
-   myA[myCount]  = document.createElement('input')               
-   myA[myCount].setAttribute('value', 'Fred '+myCount); 
-   myA[myCount].setAttribute('type', 'Text');                   
-   myA[myCount].setAttribute('title', 'Test '+myCount);                                            
+   myA[myCount]  = document.createElement('input')  
+   myA[myCount].setAttribute('type', 'Text');                
+   myA[myCount].setAttribute('id', 'myA' + myCount);                   
+   myA[myCount].setAttribute('name', 'myAname' + myCount);                
+   myA[myCount].setAttribute('value', 'Fred' + myCount); 
+   myA[myCount].setAttribute('title', 'Test' + myCount);                                            
    document.getElementById('myDiv01').appendChild(myA[myCount])     
                                                 
    // add a button                                                          
   
-   myB[myCount]  = document.createElement('input')               
-   myB[myCount].setAttribute('value', 'Fred '+myCount); 
-   myB[myCount].setAttribute('type', 'button');                   
-   myB[myCount].setAttribute('title', 'Test '+myCount);                                            
+   myB[myCount]  = document.createElement('input')   
+   myB[myCount].setAttribute('type', 'button');                             
+   myA[myCount].setAttribute('id', 'myB' + myCount);                   
+   myA[myCount].setAttribute('name', 'myBname' + myCount);              
+   myB[myCount].setAttribute('value', 'Fred'+myCount);          
+   myB[myCount].setAttribute('title', 'Test'+myCount);                                            
    document.getElementById('myDiv01').appendChild(myB[myCount])                                             
                                                 
    myObjectData('myDiv01')                               
