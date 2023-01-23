@@ -82,7 +82,7 @@ Case Sensitive: <input id="myClassName" type=text value="ClassName">
 <input type=button value="Teach Topic" onclick="{
   document.getElementById('myTeachCount').value = parseInt(document.getElementById('myTeachCount').value)  + 1  
    let myMax =    parseInt( document.getElementById('myStudentCount').value )                                          
-  for (let myLoop = 0; myLoop < myMax; myLoop++){
+  for (let myLoop = 1; myLoop <= myMax; myLoop++){
       document.getElementById('myE'+myLoop).value =  parseInt(document.getElementById('myE'+myLoop).value) + 1                                     
   }                                              
 }">
