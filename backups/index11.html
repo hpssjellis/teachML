@@ -1,0 +1,223 @@
+Version 0.4.3-110
+
+<script>
+   
+let myStorage;
+   
+function myLoadData(){
+   myStorage = JSON.parse(localStorage.getItem(document.getElementById('myClassName').value))
+   if(myStorage  != null){
+      document.getElementById('myText1').value = JSON.stringify(myStorage) 
+      document.getElementById('myDiv02').innerHTML = JSON.stringify(myStorage, null, '<br>')
+      let myInStudents = parseInt(myStorage.amount)
+      if (myInStudents > 0) {
+         for (let x = 1; x < myInStudents; x++){
+            document.getElementById('myAddStudentsButton').click()             
+        }    
+         
+         for (let x = 0; x < myInStudents-2; x++){  
+            let y = x+1
+            document.getElementById('myB'+y).value = myStorage.skills[x].myB        
+            document.getElementById('myC'+y).value = myStorage.skills[x].myC       
+            document.getElementById('myD'+y).value = myStorage.skills[x].myD   
+            document.getElementById('myE'+y).value = myStorage.skills[x].myE 
+            console.log(myStorage.skills[x])
+
+        } 
+         
+     }        
+  }
+}
+   
+   
+function mySaveData(){
+   const userData = {
+  className : document.getElementById('myClassName').value,
+  job: 'Programmer',
+  amount: 5,
+  skills: [
+     {myB: document.getElementById('myB1').value, myC:  document.getElementById('myC1').value, myD: document.getElementById('myD1').value, myE: document.getElementById('myE1').value},
+     {myB: document.getElementById('myB2').value, myC:  document.getElementById('myC2').value, myD: document.getElementById('myD2').value, myE: document.getElementById('myE2').value},
+     {myB: document.getElementById('myB3').value, myC:  document.getElementById('myC3').value, myD: document.getElementById('myD3').value, myE: document.getElementById('myE3').value},
+    
+  ],
+  };
+   
+   
+   localStorage.setItem(document.getElementById('myClassName').value, JSON.stringify(userData) )
+}   
+   
+  
+</script>
+
+
+<H3 Align=center>Teach ML </h3>
+<H4 Align=center>An example of how to train a classroom of students as if they were a Machine Learning Neural Network (kind of)</h4>
+
+
+<h3 onclick="{
+  document.getElementById('myInstructions').style.display = 'block'            
+}">Instructions</h3>
+<div id="myInstructions" onclick="{document.getElementById('myInstructions').style.display = 'none' } ">
+
+Enter a class title and add the correct number of students,<br>
+   then enter their names and estimate the number of repeats to learn a topic<br>
+   Have students decide >= 2 other people they can teach the topic to. <br>
+   Decide which students will probably pre-learn the material and 
+   click pre-learn and student-pre-teach if appropriate for the class. <br>
+   Then click how many times you teach the material and allow students to reteach to their connected students.<br>
+   See how many teaching attempts are needed for the whole class to learn the material<br>
+   <br><br>
+   This mimics some of the concepts of neural networks.
+   Click here to hide these instructions<br>
+</div><br>
+
+
+Case Sensitive: <input id="myClassName" type=text value="ClassName">
+<input type=button value="Load" onclick="myLoadData()">
+<input type=button value="Save" onclick="mySaveData()">
+<br><br><br>
+
+<input id="preTeachList" type=text value="1,2,3,3,3">
+
+<input type=button value="Students Pre-Learn" onclick="{
+    let myToTeach = document.getElementById('preTeachList').value.split(',')
+   // console.log('myToTeach')
+   // console.log(myToTeach)
+   // console.log('myToTeach.length')    
+    //console.log(myToTeach.length)                                                  
+    for (let i=0; i < myToTeach.length; i++){
+         let z =  parseInt(myToTeach[i])                                              
+      //  console.log('z')                                
+      //  console.log(z)
+     //   console.log('document.getElementById(myE+z).value')
+      //  console.log(document.getElementById('myE'+z).value)
+        document.getElementById('myE'+z).value =  parseInt(document.getElementById('myE'+z).value) + 1  
+    }
+}"><br>
+<input type=button value="Students Pre-Teach" onclick="{
+
+    alert('Nothing yet')
+}"><br><br>
+
+<input type=button value="Teach Topic" onclick="{
+  document.getElementById('myTeachCount').value = parseInt(document.getElementById('myTeachCount').value)  + 1  
+   let myMax =    parseInt( document.getElementById('myStudentCount').value )                                          
+  for (let myLoop = 1; myLoop <= myMax; myLoop++){
+      document.getElementById('myE'+myLoop).value =  parseInt(document.getElementById('myE'+myLoop).value) + 1                                     
+  }                                              
+}">
+Taught Count:<input type=text id="myTeachCount" size=6 value=0>
+, Student Count:<input type=text id="myStudentCount" size=6 value=0>
+
+
+<input type=button id="myAddStudentsButton" value="add student" onclick="{
+
+   // Prep the div    
+                                                
+   document.getElementById('myStudentCount').value = parseInt(document.getElementById('myStudentCount').value)  + 1       
+   let myCount = parseInt(document.getElementById('myStudentCount').value)
+   
+   // put in a paragraph
+   //let myP = document.createElement('p')                                           
+   //document.getElementById('myDiv01').appendChild(myP)   
+   document.getElementById('myDiv01').innerHTML += '<br>'                                              
+  
+   //add a button    
+   let myA = new Array(1)                                                
+   myA[myCount]  = document.createElement('input')  
+   myA[myCount].setAttribute('type', 'button');                
+   myA[myCount].setAttribute('id', 'myA' + myCount);                   
+   myA[myCount].setAttribute('name', 'myAname' + myCount);                
+   myA[myCount].setAttribute('value', 'Student' + myCount); 
+   myA[myCount].setAttribute('title', 'Student' + myCount);                                            
+   document.getElementById('myDiv01').appendChild(myA[myCount])     
+                                                
+   // add text                                                          
+   let myB = new Array(1) 
+   myB[myCount]  = document.createElement('input')   
+   myB[myCount].setAttribute('type', 'text');                             
+   myB[myCount].setAttribute('id', 'myB' + myCount);                   
+   myB[myCount].setAttribute('name', 'myBname' + myCount);              
+   myB[myCount].setAttribute('value', 'Fred');          
+   myB[myCount].setAttribute('title', 'Name '+myCount);                              
+   document.getElementById('myDiv01').appendChild(myB[myCount])  
+                                                
+   
+   let myE = new Array(1) 
+   myE[myCount]  = document.createElement('input')   
+   myE[myCount].setAttribute('type', 'text');                             
+   myE[myCount].setAttribute('id', 'myE' + myCount);                   
+   myE[myCount].setAttribute('name', 'myEname' + myCount);              
+   myE[myCount].setAttribute('value', '0');          
+   myE[myCount].setAttribute('title', 'Repeat Count '+myCount);   
+   myE[myCount].setAttribute('Size', '3');                                         
+   document.getElementById('myDiv01').appendChild(myE[myCount])                                                
+        
+   let myC = new Array(1) 
+   myC[myCount]  = document.createElement('input')   
+   myC[myCount].setAttribute('type', 'text');                             
+   myC[myCount].setAttribute('id', 'myC' + myCount);                   
+   myC[myCount].setAttribute('name', 'myCname' + myCount);              
+   myC[myCount].setAttribute('value', '5');          
+   myC[myCount].setAttribute('title', 'Repeats to Learn '+myCount);     
+   myC[myCount].setAttribute('Size', '3');                                           
+   document.getElementById('myDiv01').appendChild(myC[myCount])                                                
+                                                
+    
+   let myD = new Array(1) 
+   myD[myCount]  = document.createElement('input')   
+   myD[myCount].setAttribute('type', 'text');                             
+   myD[myCount].setAttribute('id', 'myD' + myCount);                   
+   myD[myCount].setAttribute('name', 'myDname' + myCount);              
+   myD[myCount].setAttribute('value', '1,4,8');          
+   myD[myCount].setAttribute('title', 'Teach '+myCount);                           
+   document.getElementById('myDiv01').appendChild(myD[myCount])                                                
+                                                                                            
+                                                  
+                                            
+                           
+                                  
+}">
+
+
+<div id="myDiv01"></div><br><br>
+
+
+Learnt Count:<input type=text id="myLearntCount" size=3 value=0>, %:<input type=text id="myPercent" size=3 value=0><br><br>
+
+<input type=text id="myShow"  value="1"> or myB1
+
+<input type=button value="Show-Objects-value" onclick="{
+  document.getElementById('myDiv02').innerHTML  = 'id.value: ' + document.getElementById(document.getElementById('myShow').value).value + '<br>'  
+  document.getElementById('myDiv02').innerHTML  += 'id.id: ' + document.getElementById(document.getElementById('myShow').value).id + '<br>'                 
+  document.getElementById('myDiv02').innerHTML  += 'id.name: ' + document.getElementById(document.getElementById('myShow').value).name + '<br>'                                      
+                                          
+}"><br><br>
+
+<input type=button value="Show-Storage" onclick="{
+  document.getElementById('myDiv02').innerHTML  = 'myB.value: ' + myStorage.skills[document.getElementById('myShow').value].myB  + '<br>'  
+  document.getElementById('myDiv02').innerHTML  += 'myC.value: ' + myStorage.skills[document.getElementById('myShow').value].myC  + '<br>'                  
+  document.getElementById('myDiv02').innerHTML  += 'myD.value: ' + myStorage.skills[document.getElementById('myShow').value].myD  + '<br>'                
+  document.getElementById('myDiv02').innerHTML  += 'myE.value: ' + myStorage.skills[document.getElementById('myShow').value].myE  + '<br>'                                         
+                                          
+}"><br><br>
+     
+
+
+<textarea id="myText1" rows=5 cols=70>...</textarea><br>
+
+<input type="button" value="Change" onClick="{
+   document.getElementById('myB2').value = myStorage.skills[1].myB    
+}">
+
+<div id="myDiv02">...</div><br><br>
+
+<input type="button" value="Store Text" onClick="{
+   localStorage.setItem('myStoredText', document.getElementById('myText1').value)
+  // alert(document.getElementById('myText1').value + ' \nHas been stored')
+   document.getElementById('myText1').value = ''
+}">
+
+
+                                              
