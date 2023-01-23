@@ -1,15 +1,16 @@
-Version 0.3.2-670
+Version 0.3.2-71
 
 <script>
 function myLoadData(){
    myStorage = JSON.parse(localStorage.getItem(document.getElementById('myClassName').value))
    if(myStorage  != null){
-      document.getElementById('myText1').value = JSON.stringify(myStorage) 
-      document.getElementById('myDiv02').innerHTML = myStorage
+      document.getElementById('myText1').value = JSON.stringify(myStorage,null,'\n') 
+      document.getElementById('myDiv02').innerHTML = JSON.stringify(myStorage,null,'<br>')
       let myInStudents = parseInt(myStorage.amount)
       if (myInStudents > 0) {
          for (let x = 1; x < myInStudents; x++){
-            document.getElementById('myAddStudentsButton').click()  
+            document.getElementById('myAddStudentsButton').click()             
+            myA[x].setAttribute('value', 'Wild'); 
         }     
      }        
   }
