@@ -1,19 +1,27 @@
-Version 0.3.0-64
+Version 0.3.1-65
 
-<body onload="{
-   myStorage = localStorage.getItem('myStoredText')
+<script>
+function myLoadData(){
+   myStorage = localStorage.getItem(document.getElementById('myClassName').value)
    if(myStorage  != null){
-      document.getElementById('myText1').value = myStorage 
-      let myInStudents = parseInt(myStorage)
+      document.getElementById('myText1').value = JSON.stringify(myStorage) 
+      document.getElementById('myDiv02').innerHTML = myStorage
+      let myInStudents = parseInt(myStorage.amount)
       if (myInStudents > 0) {
          for (let x = 1; x < myInStudents; x++){
             document.getElementById('myAddStudentsButton').click()  
         }     
      }        
   }
-}">
-  
+}
+   
+   
+function mySaveData(){
 
+}   
+   
+  
+</script>
 
 
 <H2 Align=center>Teach ML </h2>
@@ -23,7 +31,10 @@ Version 0.3.0-64
 <h3>Instructions</h3>
 
 
-<input id="myTitle" type=text value="className"><br>
+<input id="myTitle" type=text value="myClassName">
+<input type=button value="Load" onclick="myLoadData()">
+<input type=button value="Save" onclick="mySaveData()">
+<br>
 <input type=button value="teach" onclick="{
   document.getElementById('myTeachCount').value = parseInt(document.getElementById('myTeachCount').value)  + 1                                       
                                           
@@ -116,7 +127,7 @@ Learnt Count:<input type=text id="myLearntCount" size=3 value=0>, %:<input type=
                                           
 }">
 
-Text example: <input id="myText1" type=text size=70 value="5" placeholder="Write here to store"><br>
+Text example: <textarea id="myText1" rows=5 cols=70>...</textarea><br>
 
 <input type="button" value="Store Text" onClick="{
    localStorage.setItem('myStoredText', document.getElementById('myText1').value)
