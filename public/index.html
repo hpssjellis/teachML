@@ -1,4 +1,4 @@
-Version 0.4.2-109
+Version 0.4.3-110
 
 <script>
    
@@ -78,16 +78,16 @@ Case Sensitive: <input id="myClassName" type=text value="ClassName">
 
 <input type=button value="Students Pre-Learn" onclick="{
     let myToTeach = document.getElementById('preTeachList').value.split(',')
-    console.log('myToTeach')
-    console.log(myToTeach)
-    console.log('myToTeach.length')    
-    console.log(myToTeach.length)                                                  
+   // console.log('myToTeach')
+   // console.log(myToTeach)
+   // console.log('myToTeach.length')    
+    //console.log(myToTeach.length)                                                  
     for (let i=0; i < myToTeach.length; i++){
-         let z =  parseInt(myToTeach[i]) + 1                                             
-        console.log('z')                                
-        console.log(z)
-        console.log('document.getElementById(myE+z).value')
-        console.log(document.getElementById('myE'+z).value)
+         let z =  parseInt(myToTeach[i])                                              
+      //  console.log('z')                                
+      //  console.log(z)
+     //   console.log('document.getElementById(myE+z).value')
+      //  console.log(document.getElementById('myE'+z).value)
         document.getElementById('myE'+z).value =  parseInt(document.getElementById('myE'+z).value) + 1  
     }
 }"><br>
