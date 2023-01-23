@@ -1,4 +1,4 @@
-Version 0.3.1-65
+Version 0.3.1-67
 
 <script>
 function myLoadData(){
@@ -17,7 +17,7 @@ function myLoadData(){
    
    
 function mySaveData(){
-
+   localStorage.setItem(document.getElementById('myClassName').value, { 'amount': '4', 'type': 'veggie' })
 }   
    
   
