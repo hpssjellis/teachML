@@ -1,4 +1,4 @@
-Version 0.5.0-111
+Version 0.5.0-112
 
 <script>
    
@@ -60,11 +60,12 @@ function mySaveData(){
 }">Instructions</h3>
 <div id="myInstructions" onclick="{document.getElementById('myInstructions').style.display = 'none' } ">
 
-Enter a class title and add the correct number of students,<br>
-   then enter their names and estimate the number of repeats to learn a topic<br>
-   Have students decide >= 2 other people they can teach the topic to. <br>
+Enter a <b>class title</b> and add the correct number of students,<br>
+   Then enter their names and estimate the number of repeats to learn a topic<br>
+   Have students decide >= 2 other people they can teach the topic to. <br><br>
+   <b>Save your class</b> to local storage. The class name will get it back<br><br>
    Decide which students will probably pre-learn the material and 
-   click pre-learn and student-pre-teach if appropriate for the class. <br>
+   Click pre-learn and student-pre-teach if appropriate for the class. <br>
    Then click how many times you teach the material and allow students to reteach to their connected students.<br>
    See how many teaching attempts are needed for the whole class to learn the material<br>
    <br><br>
@@ -99,7 +100,7 @@ Case Sensitive: <input id="myClassName" type=text value="ClassName">
 
    let myMax =  parseInt( document.getElementById('myStudentCount').value )                                          
    for (let myLoop = 1; myLoop <= myMax; myLoop++){
-      if (parseInt(document.getElementById('myE'+myLoop).value)  >= parseInt(document.getElementById('myC'+myLoop).value){
+      if ( parseInt(document.getElementById('myE'+myLoop).value)  >= parseInt(document.getElementById('myC'+myLoop).value) ){
            console.log('has learnt)  
            console.log(myLoop)
       }                                    
