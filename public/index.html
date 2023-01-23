@@ -1,4 +1,4 @@
-Version 0.3.2-78
+Version 0.3.2-80
 
 <script>
 function myLoadData(){
@@ -11,9 +11,9 @@ function myLoadData(){
          for (let x = 1; x < myInStudents; x++){
             document.getElementById('myAddStudentsButton').click()             
            // document.getElementById('myA'+x).value = myStorage.skills[x].value      
-            document.getElementById('myB'+x).value = myStorage.skills[x][0]        
-            document.getElementById('myC'+x).value = myStorage.skills[x][1]       
-            document.getElementById('myD'+x).value = myStorage.skills[x][2]      
+            document.getElementById('myB'+x).value = myStorage.skills[x,0]        
+            document.getElementById('myC'+x).value = myStorage.skills[x,1]       
+            document.getElementById('myD'+x).value = myStorage.skills[x,2]      
         }     
      }        
   }
@@ -26,8 +26,9 @@ function mySaveData(){
   job: 'Programmer',
   amount: 5,
   skills: [
-    [ document.getElementById('myB1').value,  document.getElementById('myC1').value,  document.getElementById('myD1').value]
-
+    [ document.getElementById('myB1').value,  document.getElementById('myC1').value,  document.getElementById('myD1').value],
+    [ document.getElementById('myB2').value,  document.getElementById('myC2').value,  document.getElementById('myD2').value],
+    [ document.getElementById('myB3').value,  document.getElementById('myC3').value,  document.getElementById('myD3').value],
   ],
   };
    
