@@ -1,4 +1,4 @@
-Version 0.2.1-50
+Version 0.2.2-51
 <H2 Align=center>Teach ML </h2>
 <H3 Align=center>An example of how to train a classroom of students as if they were a Machine Learning Neural Network (kind of)</h3>
 
@@ -27,30 +27,55 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
    //document.getElementById('myDiv01').appendChild(myP)   
    document.getElementById('myDiv01').innerHTML += '<br>'                                              
   
-   //add a text box    
-   let myA = new Array(1) 
-   let myB = new Array(1) 
-                                                
+   //add a button    
+   let myA = new Array(1)                                                
    myA[myCount]  = document.createElement('input')  
-   myA[myCount].setAttribute('type', 'Text');                
+   myA[myCount].setAttribute('type', 'button');                
    myA[myCount].setAttribute('id', 'myA' + myCount);                   
    myA[myCount].setAttribute('name', 'myAname' + myCount);                
-   myA[myCount].setAttribute('value', 'Fred' + myCount); 
-   myA[myCount].setAttribute('title', 'Test' + myCount);                                            
+   myA[myCount].setAttribute('value', 'Student' + myCount); 
+   myA[myCount].setAttribute('title', 'Student' + myCount);                                            
    document.getElementById('myDiv01').appendChild(myA[myCount])     
                                                 
-   // add a button                                                          
-  
+   // add text                                                          
+   let myB = new Array(1) 
    myB[myCount]  = document.createElement('input')   
-   myB[myCount].setAttribute('type', 'button');                             
-   myA[myCount].setAttribute('id', 'myB' + myCount);                   
-   myA[myCount].setAttribute('name', 'myBname' + myCount);              
-   myB[myCount].setAttribute('value', 'Fred'+myCount);          
-   myB[myCount].setAttribute('title', 'Test'+myCount);                                            
+   myB[myCount].setAttribute('type', 'text');                             
+   myB[myCount].setAttribute('id', 'myB' + myCount);                   
+   myB[myCount].setAttribute('name', 'myBname' + myCount);              
+   myB[myCount].setAttribute('value', 'Fred');          
+   myB[myCount].setAttribute('title', 'Student Name'+myCount);     
+   myB[myCount].setAttribute('Size', '12');                                           
    document.getElementById('myDiv01').appendChild(myB[myCount])  
+                                                
+                                                
+        
+   let myC = new Array(1) 
+   myC[myCount]  = document.createElement('input')   
+   myC[myCount].setAttribute('type', 'text');                             
+   myC[myCount].setAttribute('id', 'myC' + myCount);                   
+   myC[myCount].setAttribute('name', 'myCname' + myCount);              
+   myC[myCount].setAttribute('value', '5');          
+   myC[myCount].setAttribute('title', 'Student Teach'+myCount);     
+   myC[myCount].setAttribute('Size', '5');                                           
+   document.getElementById('myDiv01').appendChild(myC[myCount])                                                
+                                                
+    
+   let myD = new Array(1) 
+   myD[myCount]  = document.createElement('input')   
+   myD[myCount].setAttribute('type', 'text');                             
+   myD[myCount].setAttribute('id', 'myD' + myCount);                   
+   myD[myCount].setAttribute('name', 'myDname' + myCount);              
+   myD[myCount].setAttribute('value', '1,4,8');          
+   myD[myCount].setAttribute('title', 'Teach'+myCount);                           
+   document.getElementById('myDiv01').appendChild(myD[myCount])                                                
+                                                                                            
+                                                
+                                                
+                                                
 
-   console.log(myA[myCount].id)
-   console.log(document.getElementById(myA[myCount].id).value)
+  //console.log(myA[myCount].id)
+   //console.log(document.getElementById(myA[myCount].id).value)
                                                 
                            
                                   
