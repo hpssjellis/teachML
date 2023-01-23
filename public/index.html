@@ -23,8 +23,9 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
    let myCount = parseInt(document.getElementById('myStudentCount').value)
    
    // put in a paragraph
-   let myP = document.createElement('p')                                           
-   document.getElementById('myDiv01').appendChild(myP)   
+   //let myP = document.createElement('p')                                           
+   //document.getElementById('myDiv01').appendChild(myP)   
+   document.getElementById('myDiv01').innerHTML += '<br>'                                              
   
    //add a text box    
    let myA = new Array(1) 
@@ -66,13 +67,12 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
 }">
 Learnt Count:<input type=text id="myLearntCount" size=6 value=0>, %:<input type=text id="myPercent" size=6 value=0><br><br>
 
-
+<input type=text id="myShow"  value="myB1">
 <input type=button value="Show-Objects" onclick="{
-  document.getElementById('myDiv02').innerHTML = document.getElementById('myB1').value       
-  document.getElementById('myShow').value = document.getElementById('myB1').value                                      
+  document.getElementById(document.getElementById('myShow').value) = document.getElementById('myB1').value                                           
                                           
 }">
-<input type=text id="myShow"  value="myDocument">
+
 
 
 
