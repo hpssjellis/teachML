@@ -1,4 +1,4 @@
-Version 0.3.2-82
+Version 0.3.2-84
 
 <script>
 function myLoadData(){
@@ -12,10 +12,11 @@ function myLoadData(){
             document.getElementById('myAddStudentsButton').click()             
         }    
          
-         for (let x = 1; x < myInStudents; x++){    
-            document.getElementById('myB'+x).value = myStorage.skills[0,x]        
-            document.getElementById('myC'+x).value = myStorage.skills[1,x]       
-            document.getElementById('myD'+x).value = myStorage.skills[2,x]   
+         for (let x = 0; x < myInStudents; x++){    
+            document.getElementById('myB'+x).value = myStorage.skills[x][0]        
+            document.getElementById('myC'+x).value = myStorage.skills[x][1]       
+            document.getElementById('myD'+x).value = myStorage.skills[x][2]   
+            document.getElementById('myE'+x).value = myStorage.skills[x][3]   
 
         } 
          
@@ -30,9 +31,10 @@ function mySaveData(){
   job: 'Programmer',
   amount: 5,
   skills: [
-    [ document.getElementById('myB1').value,  document.getElementById('myC1').value,  document.getElementById('myD1').value],
-    [ document.getElementById('myB2').value,  document.getElementById('myC2').value,  document.getElementById('myD2').value],
-    [ document.getElementById('myB3').value,  document.getElementById('myC3').value,  document.getElementById('myD3').value],
+    [ document.getElementById('myB1').value,  document.getElementById('myC1').value,  document.getElementById('myD1').value,  document.getElementById('myE1').value],
+    [ document.getElementById('myB2').value,  document.getElementById('myC2').value,  document.getElementById('myD2').value,  document.getElementById('myE2').value],
+    [ document.getElementById('myB3').value,  document.getElementById('myC3').value,  document.getElementById('myD3').value,  document.getElementById('myE3').value],
+    [ document.getElementById('myB4').value,  document.getElementById('myC4').value,  document.getElementById('myD4').value,  document.getElementById('myE4').value],
   ],
   };
    
@@ -119,7 +121,15 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
    myD[myCount].setAttribute('title', 'Teach '+myCount);                           
    document.getElementById('myDiv01').appendChild(myD[myCount])                                                
                                                                                             
-                                                
+ 
+   let myE = new Array(1) 
+   myE[myCount]  = document.createElement('input')   
+   myE[myCount].setAttribute('type', 'text');                             
+   myE[myCount].setAttribute('id', 'myE' + myCount);                   
+   myE[myCount].setAttribute('name', 'myEname' + myCount);              
+   myE[myCount].setAttribute('value', '0');          
+   myE[myCount].setAttribute('title', 'Count '+myCount);                           
+   document.getElementById('myDiv01').appendChild(myE[myCount])                                                    
                                             
                            
                                   
