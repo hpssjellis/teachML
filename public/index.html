@@ -1,4 +1,4 @@
-Version 0.3.0-55
+Version 0.3.0-56
 
 <body onload="{
    myStorage = localStorage.getItem('myStoredText')
@@ -92,19 +92,25 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
 
 <div id="myDiv01"></div><br><br>
 <div id="myDiv02">...</div><br><br>
-<input type=button value="Save-to-LocalStorage" onclick="{
-alert()                                 
-                                          
-}">
+
 
 Learnt Count:<input type=text id="myLearntCount" size=3 value=0>, %:<input type=text id="myPercent" size=3 value=0><br><br>
 
-<input type=text id="myShow"  value="myB1.value">
+<input type=text id="myShow"  value="myB1">
 <input type=button value="Show-Objects-value" onclick="{
-  document.getElementById('myDiv02').innerHTML  = document.getElementById(document.getElementById('myShow').value)                                      
+  document.getElementById('myDiv02').innerHTML  = document.getElementById(document.getElementById('myShow').value).value + '<br>'  
+  document.getElementById('myDiv02').innerHTML  += document.getElementById(document.getElementById('myShow').value).id + '<br>'                 
+  document.getElementById('myDiv02').innerHTML  += document.getElementById(document.getElementById('myShow').value).name + '<br>'                                      
                                           
 }">
 
+     
+<br><br>
+     
+<input type=button value="Save-to-LocalStorage" onclick="{
+  alert()                                 
+                                          
+}">
 
 Text example: <input id="myText1" type=text size=70 value="" placeholder="Write here to store"><br>
 
