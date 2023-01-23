@@ -1,4 +1,4 @@
-Version 0.3.2-71
+Version 0.3.2-73
 
 <script>
 function myLoadData(){
@@ -10,7 +10,8 @@ function myLoadData(){
       if (myInStudents > 0) {
          for (let x = 1; x < myInStudents; x++){
             document.getElementById('myAddStudentsButton').click()             
-            myA[x].setAttribute('value', 'Wild'); 
+           // myA[x].setAttribute('value', 'Wild'); 
+            document.getElementById('myA'+x).value = 'wild'
         }     
      }        
   }
