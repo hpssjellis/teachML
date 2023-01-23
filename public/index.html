@@ -1,4 +1,4 @@
-Version 0.5.0-118
+Version 0.5.0-119
 
 <script>
    
@@ -152,7 +152,8 @@ Case Sensitive: <input id="myClassName" type=text value="ClassName">
    let myMax =    parseInt( document.getElementById('myStudentCount').value )                                          
   for (let myLoop = 1; myLoop <= myMax; myLoop++){
       document.getElementById('myE'+myLoop).value =  parseInt(document.getElementById('myE'+myLoop).value) + 1                                     
-  }                                              
+  }
+  myCheckAll()    
 }">
 Taught Count:<input type=text id="myTeachCount" size=6 value=0>
 , Student Count:<input type=text id="myStudentCount" size=6 value=0>
