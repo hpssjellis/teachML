@@ -145,7 +145,7 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
 
 Learnt Count:<input type=text id="myLearntCount" size=3 value=0>, %:<input type=text id="myPercent" size=3 value=0><br><br>
 
-<input type=text id="myShow"  value="myB1">
+<input type=text id="myShow"  value="1"> or myB1
 
 <input type=button value="Show-Objects-value" onclick="{
   document.getElementById('myDiv02').innerHTML  = 'id.value: ' + document.getElementById(document.getElementById('myShow').value).value + '<br>'  
@@ -154,6 +154,13 @@ Learnt Count:<input type=text id="myLearntCount" size=3 value=0>, %:<input type=
                                           
 }"><br><br>
 
+<input type=button value="Show-Storage" onclick="{
+  document.getElementById('myDiv02').innerHTML  = 'myB.value: ' + myStorage.skills[document.getElementById('myShow').value].myB  + '<br>'  
+  document.getElementById('myDiv02').innerHTML  += 'myC.value: ' + myStorage.skills[document.getElementById('myShow').value].myC  + '<br>'                  
+  document.getElementById('myDiv02').innerHTML  += 'myD.value: ' + myStorage.skills[document.getElementById('myShow').value].myD  + '<br>'                
+  document.getElementById('myDiv02').innerHTML  += 'myE.value: ' + myStorage.skills[document.getElementById('myShow').value].myE  + '<br>'                                         
+                                          
+}"><br><br>
      
 
 
