@@ -1,10 +1,15 @@
-Version 0.5.0-119
+Version 0.6.0-120
 
 <script>
    
 let myStorage;
    
 function myLoadData(){
+   // make sure things are zeroed
+   document.getElementById('myDiv02').innerHTML = ''
+   document.getElementById('myStudentCount').value = 0
+   
+   //grab the JSON from Local Storage
    myStorage = JSON.parse(localStorage.getItem(document.getElementById('myClassName').value))
    if(myStorage  != null){
       document.getElementById('myText1').value = JSON.stringify(myStorage) 
@@ -122,33 +127,22 @@ Case Sensitive: <input id="myClassName" type=text value="ClassName">
                                                                                                  
                                                        
 }"><br>
-<input type=button value="Students Pre-Teach" onclick="{
-   
-   // only students with lime buttons get to teach the others.
- //  let myTempRepeatsNeeded
- //  let myTempCount                                                    
+<input type=button id="StudentsTeachButton" value="Students Teach" onclick="{
+                                                    
    let myMax2 =  parseInt( document.getElementById('myStudentCount').value )                                          
    for (let myLoop2 = 1; myLoop2 <= myMax2; myLoop2++){
-       
-                                                       
+                                                            
        if(document.getElementById('myA'+myLoop2).style.backgroundColor == 'lime'){                                               
           // Teach to the other students                                                  
           myTeach(document.getElementById('myD'+myLoop2).value)                                                
        
-        }                                               
-                                                       
-       // check if anyone has learnt the material                                               
-     //  myTempCount  =  parseInt(document.getElementById('myE'+myLoop2).value)
-      // myTempRepeatsNeeded  = parseInt(document.getElementById('myC'+myLoop2).value)                                            
-     // if ( myTempCount >= myTempRepeatsNeeded ){
-     //    document.getElementById('myA'+myLoop2).style.backgroundColor = 'lime'                                                                                                                                            
-     // }                                    
+        }                                                                                                                               
    } 
    myCheckAll()                                                        
 
 }"><br><br>
 
-<input type=button value="Teach (re-teach) Topic" onclick="{
+<input type=button id="myTeachButton" value="Teach Topic" onclick="{
   document.getElementById('myTeachCount').value = parseInt(document.getElementById('myTeachCount').value)  + 1  
    let myMax =    parseInt( document.getElementById('myStudentCount').value )                                          
   for (let myLoop = 1; myLoop <= myMax; myLoop++){
@@ -156,6 +150,14 @@ Case Sensitive: <input id="myClassName" type=text value="ClassName">
   }
   myCheckAll()    
 }">
+
+<input type=button  value="Teach and students teach" onclick="{
+  document.getElementById('myTeachButton').click()      
+  myCheckAll()  
+  document.getElementById('StudentsTeachButton').click()                                                             
+}">
+
+
 Taught Count:<input type=text id="myTeachCount" size=6 value=0>
 , Student Count:<input type=text id="myStudentCount" size=6 value=0>
 
