@@ -118,7 +118,6 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
 
 
 <div id="myDiv01"></div><br><br>
-<div id="myDiv02">...</div><br><br>
 
 
 Learnt Count:<input type=text id="myLearntCount" size=3 value=0>, %:<input type=text id="myPercent" size=3 value=0><br><br>
@@ -132,31 +131,18 @@ Learnt Count:<input type=text id="myLearntCount" size=3 value=0>, %:<input type=
 }">
 
      
-<br><br>
-     
-<input type=button value="Save-to-LocalStorage" onclick="{
-  alert()                                 
-                                          
-}">
+
 
 Text example: <textarea id="myText1" rows=5 cols=70>...</textarea><br>
+
+
+<div id="myDiv02">...</div><br><br>
 
 <input type="button" value="Store Text" onClick="{
    localStorage.setItem('myStoredText', document.getElementById('myText1').value)
   // alert(document.getElementById('myText1').value + ' \nHas been stored')
    document.getElementById('myText1').value = ''
 }">
-
-<input type="button" value="Retrieve Text" onClick="{
-   document.getElementById('myText1').value = localStorage.getItem('myStoredText')
-}"> 
-
-<input type="button" value="Add Student" onClick="{
-   document.getElementById('myAddStudentsButton').click()
-}"> 
-
-
-<br><br><br><br><br>
 
 
                                               
