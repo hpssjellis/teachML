@@ -1,4 +1,4 @@
-Version 0.3.2-95
+Version 0.3.2-96
 
 <script>
    
@@ -15,11 +15,12 @@ function myLoadData(){
             document.getElementById('myAddStudentsButton').click()             
         }    
          
-         for (let x = 1; x < myInStudents-2; x++){    
-            document.getElementById('myB'+x).value = myStorage.skills[x].myB        
-            document.getElementById('myC'+x).value = myStorage.skills[x].myC       
-            document.getElementById('myD'+x).value = myStorage.skills[x].myD   
-            document.getElementById('myE'+x).value = myStorage.skills[x].myE 
+         for (let x = 0; x < myInStudents-2; x++){  
+            let y = x+1
+            document.getElementById('myB'+y).value = myStorage.skills[x].myB        
+            document.getElementById('myC'+y).value = myStorage.skills[x].myC       
+            document.getElementById('myD'+y).value = myStorage.skills[x].myD   
+            document.getElementById('myE'+y).value = myStorage.skills[x].myE 
             console.log(myStorage.skills[x])
 
         } 
