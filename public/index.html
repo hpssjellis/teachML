@@ -1,4 +1,4 @@
-Version 0.4.2-104
+Version 0.4.2-105
 
 <script>
    
@@ -72,10 +72,10 @@ Case Sensitive: <input id="myClassName" type=text value="ClassName">
 
 <input type=button value="Students Pre-Learn" onclick="{
     let myToTeach = document.getElementById('preTeachList').value.split()
-    for (let i=1; i <= myToTeach.length; i++){
+    for (let i=0; i < myToTeach.length; i++){
         document.getElementById('myE'+myToTeach[i]).value =  parseInt(document.getElementById('myE'+myToTeach[i]).value) + 1  
     }
-}">
+}"><br>
 <input type=button value="Students Pre-Teach" onclick="{
 
     alert('Nothing yet')
