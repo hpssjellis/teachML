@@ -1,4 +1,4 @@
-Version 0.2.2-52
+Version 0.2.2-53
 <H2 Align=center>Teach ML </h2>
 <H3 Align=center>An example of how to train a classroom of students as if they were a Machine Learning Neural Network (kind of)</h3>
 
@@ -44,7 +44,7 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
    myB[myCount].setAttribute('id', 'myB' + myCount);                   
    myB[myCount].setAttribute('name', 'myBname' + myCount);              
    myB[myCount].setAttribute('value', 'Fred');          
-   myB[myCount].setAttribute('title', 'Student Name'+myCount);     
+   myB[myCount].setAttribute('title', 'Name '+myCount);     
    myB[myCount].setAttribute('Size', '12');                                           
    document.getElementById('myDiv01').appendChild(myB[myCount])  
                                                 
@@ -56,8 +56,8 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
    myC[myCount].setAttribute('id', 'myC' + myCount);                   
    myC[myCount].setAttribute('name', 'myCname' + myCount);              
    myC[myCount].setAttribute('value', '5');          
-   myC[myCount].setAttribute('title', 'Student Teach'+myCount);     
-   myC[myCount].setAttribute('Size', '5');                                           
+   myC[myCount].setAttribute('title', 'IQ '+myCount);     
+   myC[myCount].setAttribute('Size', '3');                                           
    document.getElementById('myDiv01').appendChild(myC[myCount])                                                
                                                 
     
@@ -67,16 +67,11 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
    myD[myCount].setAttribute('id', 'myD' + myCount);                   
    myD[myCount].setAttribute('name', 'myDname' + myCount);              
    myD[myCount].setAttribute('value', '1,4,8');          
-   myD[myCount].setAttribute('title', 'Teach'+myCount);                           
+   myD[myCount].setAttribute('title', 'Will Teach '+myCount);                           
    document.getElementById('myDiv01').appendChild(myD[myCount])                                                
                                                                                             
                                                 
-                                                
-                                                
-
-  //console.log(myA[myCount].id)
-   //console.log(document.getElementById(myA[myCount].id).value)
-                                                
+                                            
                            
                                   
 }">
@@ -86,11 +81,7 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
 <div id="myDiv02">...</div><br><br>
 
 
-<input id="TaughtButton" type=button value="Taught" onclick="{
-  document.getElementById('myTimesTaught').value = parseInt(document.getElementById('myTimesTaught').value)  + 1                                       
-                                          
-}">
-Learnt Count:<input type=text id="myLearntCount" size=6 value=0>, %:<input type=text id="myPercent" size=6 value=0><br><br>
+Learnt Count:<input type=text id="myLearntCount" size=3 value=0>, %:<input type=text id="myPercent" size=3 value=0><br><br>
 
 <input type=text id="myShow"  value="myB1">
 <input type=button value="Show-Objects-value" onclick="{
