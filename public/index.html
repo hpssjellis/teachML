@@ -1,4 +1,4 @@
-Version 0.3.0-56
+Version 0.3.0-57
 
 <body onload="{
    myStorage = localStorage.getItem('myStoredText')
@@ -7,7 +7,7 @@ Version 0.3.0-56
       let myInStudents = parseInt(document.getElementById('myText1').value
       if (myInStudents > 0) {
          for (let x = 1; x < myInStudents; x++){
-           document.getElementById(myAddStudentButton).click();  
+           document.getElementById('myAddStudentsButton').click();  
          }
      }        
   }
@@ -34,7 +34,7 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
 , Student Count:<input type=text id="myStudentCount" size=6 value=0>
 
 
-<input type=button id="myAddStudentButton" value="add student" onclick="{
+<input type=button id="myAddStudentsButton" value="add student" onclick="{
 
    // Prep the div    
                                                 
