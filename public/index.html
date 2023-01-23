@@ -1,4 +1,4 @@
-Version 0.1.4-34
+Version 0.1.4-35
 <H2 Align=center>Teach ML </h2>
 <H3 Align=center>An example of how to train a classroom of students as if they were a Machine Learning Neural Network (kind of)</h3>
 
@@ -11,18 +11,22 @@ Version 0.1.4-34
   document.getElementById('myTeachCount').value = parseInt(document.getElementById('myTeachCount').value)  + 1                                       
                                           
 }">
-<input type=text id="myTeachCount" size=6 value=0>
+Taught Count:<input type=text id="myTeachCount" size=6 value=0>
+, Student Count:<input type=text id="myStudentCount" size=6 value=0>
 
 
 <input type=button value="add student" onclick="{
 
-   // Prep the div                                                
-   let myCount = parseInt(document.getElementById('myTeachCount').value)
+   // Prep the div    
+                                                
+   document.getElementById('myStudentCount').value = parseInt(document.getElementById('myStudentCount').value)  + 1       
+   let myCount = parseInt(document.getElementById('myStudentCount').value)
    let myP = document.createElement('p')                                           
    document.getElementById('myDiv01').appendChild(myP)   
   
    //add a text box    
-   let myA = new Array(3) 
+   let myA = new Array(1) 
+   let myB = new Array(1) 
                                                 
    myA[myCount]  = document.createElement('input')               
    myA[myCount].setAttribute('value', 'Fred '+myCount); 
@@ -31,12 +35,12 @@ Version 0.1.4-34
    document.getElementById('myDiv01').appendChild(myA[myCount])     
                                                 
    // add a button                                                          
-   my02.setAttribute('value', 'Fred2'); 
-   my02.setAttribute('type', 'button');                   
-   my02.setAttribute('title', 'Test2');                  
-   my02.setAttribute('onClick', 'alert()');                                              
-                                                
-    // document.getElementById('my01').value = 'WOW this is cool'                                             
+  
+   myB[myCount]  = document.createElement('input')               
+   myB[myCount].setAttribute('value', 'Fred '+myCount); 
+   myB[myCount].setAttribute('type', 'button');                   
+   myB[myCount].setAttribute('title', 'Test '+myCount);                                            
+   document.getElementById('myDiv01').appendChild(myB[myCount])                                             
                                                 
                                   
                                   
