@@ -1,4 +1,4 @@
-Version 0.4.1-102
+Version 0.4.1-103
 
 <script>
    
@@ -81,8 +81,8 @@ Case Sensitive: <input id="myClassName" type=text value="ClassName">
 
 <input type=button value="Teach Topic" onclick="{
   document.getElementById('myTeachCount').value = parseInt(document.getElementById('myTeachCount').value)  + 1  
-                                                
-  for (let myLoop = 0; myLoop < parseInt(parseInt(document.getElementById('myStudentCount').value)); myLoop++){
+   let myMax =    parseInt( document.getElementById('myStudentCount').value )                                          
+  for (let myLoop = 0; myLoop < myMax; myLoop++){
       document.getElementById('myE'+myLoop).value =  parseInt(document.getElementById('myE'+myLoop).value) + 1                                     
   }                                              
 }">
