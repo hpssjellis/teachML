@@ -1,4 +1,4 @@
-Version 0.5.0-115
+Version 0.5.0-116
 
 <script>
    
@@ -46,6 +46,19 @@ function mySaveData(){
    
    localStorage.setItem(document.getElementById('myClassName').value, JSON.stringify(userData) )
 }   
+ 
+   
+function myTeach(myInputList){
+    let myTeachOthers = myInputList.split(',')
+                                                
+    for (let i=0; i < myTeachOthers.length; i++){
+         let z =  parseInt(myTeachOthers[i])                                              
+        document.getElementById('myE'+z).value =  parseInt(document.getElementById('myE'+z).value) + 1  
+    }
+
+}   
+   
+   
    
   
 </script>
@@ -104,8 +117,11 @@ Case Sensitive: <input id="myClassName" type=text value="ClassName">
        myTempCount  =  parseInt(document.getElementById('myE'+myLoop2).value)
         myTempRepeatsNeeded  = parseInt(document.getElementById('myC'+myLoop2).value)                                            
       if ( myTempCount >= myTempRepeatsNeeded ){
-           console.log('has learnt')  
-           console.log(myLoop2)
+          // console.log('has learnt')  
+          // console.log(myLoop2)
+         document.getElementById('myA'+myLoop2).style.backgroundColor = 'lime'                                           
+        // background-color:lime                                              
+                                                       
       }                                    
    }  
 }"><br><br>
