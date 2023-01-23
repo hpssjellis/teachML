@@ -1,4 +1,4 @@
-Version 0.2.0-47
+Version 0.2.0-48
 <H2 Align=center>Teach ML </h2>
 <H3 Align=center>An example of how to train a classroom of students as if they were a Machine Learning Neural Network (kind of)</h3>
 
@@ -23,8 +23,8 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
    let myCount = parseInt(document.getElementById('myStudentCount').value)
    
    // put in a paragraph
-   //let myP = document.createElement('p')                                           
-   //document.getElementById('myDiv01').appendChild(myP)   
+   let myP = document.createElement('p')                                           
+   document.getElementById('myDiv01').appendChild(myP)   
   
    //add a text box    
    let myA = new Array(1) 
@@ -46,14 +46,16 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
    myA[myCount].setAttribute('name', 'myBname' + myCount);              
    myB[myCount].setAttribute('value', 'Fred'+myCount);          
    myB[myCount].setAttribute('title', 'Test'+myCount);                                            
-   document.getElementById('myDiv01').appendChild(myB[myCount])                                             
+   document.getElementById('myDiv01').appendChild(myB[myCount])  
+
+   console.log(myA[myCount].id)
                                                 
                            
                                   
 }">
 
 
-<div id="myDiv01">...</div><br><br>
+<div id="myDiv01"></div><br><br>
 
 
 <input id="TaughtButton" type=button value="Taught" onclick="{
