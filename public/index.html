@@ -1,4 +1,4 @@
-Version 0.1.4-33
+Version 0.1.4-34
 <H2 Align=center>Teach ML </h2>
 <H3 Align=center>An example of how to train a classroom of students as if they were a Machine Learning Neural Network (kind of)</h3>
 
@@ -16,23 +16,21 @@ Version 0.1.4-33
 
 <input type=button value="add student" onclick="{
 
+   // Prep the div                                                
    let myCount = parseInt(document.getElementById('myTeachCount').value)
-
-   let myA[myCount]  = document.createElement('input')               
+   let myP = document.createElement('p')                                           
+   document.getElementById('myDiv01').appendChild(myP)   
+  
+   //add a text box    
+   let myA = new Array(3) 
+                                                
+   myA[myCount]  = document.createElement('input')               
    myA[myCount].setAttribute('value', 'Fred '+myCount); 
    myA[myCount].setAttribute('type', 'Text');                   
    myA[myCount].setAttribute('title', 'Test '+myCount);                                            
    document.getElementById('myDiv01').appendChild(myA[myCount])     
                                                 
-                                                
-   let myP = document.createElement('p')                                           
-   document.getElementById('myDiv01').appendChild(myP)   
-                                                
-    
-   let my02 = document.createElement('input')                                                
-   document.getElementById('myDiv01').appendChild(my02)    
-                                                
-               
+   // add a button                                                          
    my02.setAttribute('value', 'Fred2'); 
    my02.setAttribute('type', 'button');                   
    my02.setAttribute('title', 'Test2');                  
