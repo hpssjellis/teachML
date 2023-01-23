@@ -1,4 +1,4 @@
-Version 0.3.2-77
+Version 0.3.2-78
 
 <script>
 function myLoadData(){
@@ -10,9 +10,10 @@ function myLoadData(){
       if (myInStudents > 0) {
          for (let x = 1; x < myInStudents; x++){
             document.getElementById('myAddStudentsButton').click()             
-            document.getElementById('myA'+x).value = myStorage.skills[x].value      
-            document.getElementById('myB'+x).value = myStorage.skills[x].value         
-            document.getElementById('myC'+x).value = myStorage.skills[x].value        
+           // document.getElementById('myA'+x).value = myStorage.skills[x].value      
+            document.getElementById('myB'+x).value = myStorage.skills[x][0]        
+            document.getElementById('myC'+x).value = myStorage.skills[x][1]       
+            document.getElementById('myD'+x).value = myStorage.skills[x][2]      
         }     
      }        
   }
@@ -25,9 +26,8 @@ function mySaveData(){
   job: 'Programmer',
   amount: 5,
   skills: [
-    { id: document.getElementById('myA1').id, value: document.getElementById('myA1').value },
-    { id: document.getElementById('myB1').id, value: document.getElementById('myB1').value },
-    { id: document.getElementById('myC1').id, value: document.getElementById('myC1').value },
+    [ document.getElementById('myB1').value,  document.getElementById('myC1').value,  document.getElementById('myD1').value]
+
   ],
   };
    
