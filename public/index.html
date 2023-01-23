@@ -1,18 +1,16 @@
-Version 0.3.0-61
+Version 0.3.0-62
 
 <body onload="{
    myStorage = localStorage.getItem('myStoredText')
    if(myStorage  != null){
       document.getElementById('myText1').value = myStorage 
-      let myInStudents = parseInt(document.getElementById('myText1').value
-     
+      let myInStudents = parseInt(myStorage)
+      
              
   }
 }">
   
-  <body onunload="{
-   localstorage.setItem('myStoredText',document.getElementById('myText1').value)
-}">  
+
 
 
 <H2 Align=center>Teach ML </h2>
