@@ -1,4 +1,4 @@
-Version 0.2.0-46
+Version 0.2.0-47
 <H2 Align=center>Teach ML </h2>
 <H3 Align=center>An example of how to train a classroom of students as if they were a Machine Learning Neural Network (kind of)</h3>
 
@@ -21,8 +21,10 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
                                                 
    document.getElementById('myStudentCount').value = parseInt(document.getElementById('myStudentCount').value)  + 1       
    let myCount = parseInt(document.getElementById('myStudentCount').value)
-   let myP = document.createElement('p')                                           
-   document.getElementById('myDiv01').appendChild(myP)   
+   
+   // put in a paragraph
+   //let myP = document.createElement('p')                                           
+   //document.getElementById('myDiv01').appendChild(myP)   
   
    //add a text box    
    let myA = new Array(1) 
@@ -58,10 +60,7 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
   document.getElementById('myTimesTaught').value = parseInt(document.getElementById('myTimesTaught').value)  + 1                                       
                                           
 }">
-Taught Times:<input type=text id="myTimesTaught" size=6 value=0>
-, Learnt Count:<input type=text id="myTaughtCount" size=6 value=0>
-, Student Count:<input type=text id="myTotalCount" size=6 value=0><br><br>
-, %:<input type=text id="myPercent" size=6 value=0><br><br>
+Learnt Count:<input type=text id="myLearntCount" size=6 value=0>, %:<input type=text id="myPercent" size=6 value=0><br><br>
 
 
 <input type=button value="Show-Objects" onclick="{
