@@ -1,4 +1,4 @@
-Version 0.3.2-81
+Version 0.3.2-82
 
 <script>
 function myLoadData(){
@@ -10,12 +10,15 @@ function myLoadData(){
       if (myInStudents > 0) {
          for (let x = 1; x < myInStudents; x++){
             document.getElementById('myAddStudentsButton').click()             
-           // document.getElementById('myA'+x).value = myStorage.skills[x].value      
-            document.getElementById('myB'+x).value = myStorage.skills[x,0]        
-            document.getElementById('myC'+x).value = myStorage.skills[x,1]       
-            document.getElementById('myD'+x).value = myStorage.skills[x,2]   
-            alert()
-        }     
+        }    
+         
+         for (let x = 1; x < myInStudents; x++){    
+            document.getElementById('myB'+x).value = myStorage.skills[0,x]        
+            document.getElementById('myC'+x).value = myStorage.skills[1,x]       
+            document.getElementById('myD'+x).value = myStorage.skills[2,x]   
+
+        } 
+         
      }        
   }
 }
