@@ -1,4 +1,4 @@
-Version 0.6.1-137
+Version 0.6.1-138
 
 <script>
    
@@ -39,7 +39,7 @@ function mySaveData(){
    const userData = {
   className : document.getElementById('myClassName').value,
   job: 'Programmer',
-  amount: 5,
+  amount: parseInt(document.getElementById('myStudentCount').value),
   skills: [
      {myB: document.getElementById('myB1').value, myC:  document.getElementById('myC1').value, myD: document.getElementById('myD1').value, myE: document.getElementById('myE1').value},
      {myB: document.getElementById('myB2').value, myC:  document.getElementById('myC2').value, myD: document.getElementById('myD2').value, myE: document.getElementById('myE2').value},
