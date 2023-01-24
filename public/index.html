@@ -1,4 +1,4 @@
-Version 0.6.1-132
+Version 0.6.1-133
 
 <script>
    
@@ -49,16 +49,19 @@ function mySaveData(){
   };   
   
    let j =0;
-  // let myTempB,myTempC,myTempD,myTempE 
+   let myTempB,myTempC,myTempD,myTempE 
    let myNumberOfItems = parseInt(document.getElementById('myStudentCount').value) 
    for (let k = 0; k < myNumberOfItems; k++ ){
       j = k+1;
       console.log(j) 
-     // myTempB = 'myB'+J
-      userData.skills[k].myB = document.getElementById('myB' + j).value  
-      userData.skills[k].myC = document.getElementById('myC' + j).value  
-      userData.skills[k].myD = document.getElementById('myD' + j).value  
-      userData.skills[k].myE = document.getElementById('myE' + j).value  
+      myTempB = 'myB'+J
+      myTempC = 'myC'+J
+      myTempD = 'myD'+J
+      myTempE = 'myE'+J
+      userData.skills[k].myB = document.getElementById(myTempB).value  
+      userData.skills[k].myC = document.getElementById(myTempC).value  
+      userData.skills[k].myD = document.getElementById(myTempD).value  
+      userData.skills[k].myE = document.getElementById(myTempE).value  
       
      // userData.skills[k] =     {myB: document.getElementById('myB${j}').value, myC:  document.getElementById('myC${j}').value, myD: document.getElementById('myD${j}').value, myE: document.getElementById('myE${j}').value}
    }
