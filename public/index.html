@@ -47,9 +47,14 @@ function mySaveData(){
      {myB: document.getElementById('myB3').value, myC:  document.getElementById('myC3').value, myD: document.getElementById('myD3').value, myE: document.getElementById('myE3').value},
     
   ],
-  };
+  };   
+  
    
-   
+   let myNumberOfItems = parseInt(document.getElementById('myStudentCount').value) 
+   for (let j = 0; j < myNumberOfItems; j++ ){
+      console.log(j)
+      userData.skills[0] = 'Hello'
+   }
    localStorage.setItem(document.getElementById('myClassName').value, JSON.stringify(userData) )
 }   
  
