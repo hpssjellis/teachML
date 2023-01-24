@@ -1,4 +1,4 @@
-Version 0.6.1-138
+Version 0.6.2-139
 
 <script>
    
@@ -67,10 +67,15 @@ function mySaveData(){
       console.log('myTempB') 
       console.log(myTempB) 
       
-      userData.skills[k].myB = document.getElementById(myTempB).value  
-      userData.skills[k].myC = document.getElementById(myTempC).value  
-      userData.skills[k].myD = document.getElementById(myTempD).value  
-      userData.skills[k].myE = document.getElementById(myTempE).value  
+     // userData.skills[k].myB = document.getElementById(myTempB).value  
+     // userData.skills[k].myC = document.getElementById(myTempC).value  
+     // userData.skills[k].myD = document.getElementById(myTempD).value  
+     // userData.skills[k].myE = document.getElementById(myTempE).value  
+      
+      userData.skills[k].['myB'] = document.getElementById(myTempB).value  
+      userData.skills[k].['myC'] = document.getElementById(myTempC).value  
+      userData.skills[k].['myD'] = document.getElementById(myTempD).value  
+      userData.skills[k].['myE'] = document.getElementById(myTempE).value  
       
      // userData.skills[k] =     {myB: document.getElementById('myB${j}').value, myC:  document.getElementById('myC${j}').value, myD: document.getElementById('myD${j}').value, myE: document.getElementById('myE${j}').value}
    }
