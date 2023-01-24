@@ -3,6 +3,7 @@ Version 0.6.0-120
 <script>
    
 let myStorage;
+
    
 function myLoadData(){
    // make sure things are zeroed
@@ -73,16 +74,23 @@ function myTeach(myInputList){
 
 function myCheckAll(){
    let myTempRepeatsNeeded3
-   let myTempCount3                                                    
+   let myTempCount3 
+   
+   let myTotalCount = 0;
+   let myTotalStudents = parseInt(document.getElementById('myStudentCount').value) 
    let myMax3 =  parseInt( document.getElementById('myStudentCount').value )                                          
    for (let myLoop3 = 1; myLoop3 <= myMax3; myLoop3++){                                            
        // check if anyone has learnt the material                                               
        myTempCount3  =  parseInt(document.getElementById('myE'+myLoop3).value)
        myTempRepeatsNeeded3  = parseInt(document.getElementById('myC'+myLoop3).value)                                            
       if ( myTempCount3 >= myTempRepeatsNeeded3 ){
-         document.getElementById('myA'+myLoop3).style.backgroundColor = 'lime'                                                                                                                                            
+         document.getElementById('myA'+myLoop3).style.backgroundColor = 'lime'  
+         myTotalCount +=1;
       }                                    
-   } 
+   }  
+   document.getElementById('myLearntCount').value = myTotalCount   
+   document.getElementById('myPercent').value = myTotalCount*100/myTotalStudents 
+   
 }   
    
    
