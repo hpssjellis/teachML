@@ -40,8 +40,8 @@ function mySaveData(){
   className : document.getElementById('myClassName').value,
   job: 'Programmer',
   amount: parseInt(document.getElementById('myStudentCount').value),
-  skills: [
-     {myB: document.getElementById('myB1').value, myC:  document.getElementById('myC1').value, myD: document.getElementById('myD1').value, myE: document.getElementById('myE1').value},
+  skills: [ 0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0
+  //   {myB: document.getElementById('myB1').value, myC:  document.getElementById('myC1').value, myD: document.getElementById('myD1').value, myE: document.getElementById('myE1').value},
   //   {myB: document.getElementById('myB2').value, myC:  document.getElementById('myC2').value, myD: document.getElementById('myD2').value, myE: document.getElementById('myE2').value},
   //   {myB: document.getElementById('myB3').value, myC:  document.getElementById('myC3').value, myD: document.getElementById('myD3').value, myE: document.getElementById('myE3').value},
    //  {myB: document.getElementById('myB3').value, myC:  document.getElementById('myC3').value, myD: document.getElementById('myD3').value, myE: document.getElementById('myE3').value},
@@ -71,7 +71,7 @@ function mySaveData(){
      // userData.skills[k].myC = document.getElementById(myTempC).value  
      // userData.skills[k].myD = document.getElementById(myTempD).value  
      // userData.skills[k].myE = document.getElementById(myTempE).value  
-      userData.push(skills[k])
+     //userData.push(skills[k])
       userData.skills[k]['myB'] = document.getElementById(myTempB).value  
       userData.skills[k]['myC'] = document.getElementById(myTempC).value  
       userData.skills[k]['myD'] = document.getElementById(myTempD).value  
