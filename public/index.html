@@ -1,4 +1,4 @@
-Version 0.6.0-121
+Version 0.6.0-122
 
 <script>
    
@@ -7,8 +7,8 @@ let myStorage;
    
 function myLoadData(){
    // make sure things are zeroed
-   document.getElementById('myDiv02').innerHTML = ''
-   document.getElementById('myStudentCount').value = 0
+   document.getElementById('myDiv01').innerHTML = ''
+   let myStart = document.getElementById('myStudentCount').value 
    
    //grab the JSON from Local Storage
    myStorage = JSON.parse(localStorage.getItem(document.getElementById('myClassName').value))
@@ -17,7 +17,7 @@ function myLoadData(){
       document.getElementById('myDiv02').innerHTML = JSON.stringify(myStorage, null, '<br>')
       let myInStudents = parseInt(myStorage.amount)
       if (myInStudents > 0) {
-         for (let x = 1; x < myInStudents; x++){
+         for (let x = myStart; x < myInStudents+myStart; x++){
             document.getElementById('myAddStudentsButton').click()             
         }    
          
