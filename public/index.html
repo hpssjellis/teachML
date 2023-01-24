@@ -1,4 +1,4 @@
-Version 0.6.1-136
+Version 0.6.1-137
 
 <script>
    
@@ -44,14 +44,18 @@ function mySaveData(){
      {myB: document.getElementById('myB1').value, myC:  document.getElementById('myC1').value, myD: document.getElementById('myD1').value, myE: document.getElementById('myE1').value},
      {myB: document.getElementById('myB2').value, myC:  document.getElementById('myC2').value, myD: document.getElementById('myD2').value, myE: document.getElementById('myE2').value},
      {myB: document.getElementById('myB3').value, myC:  document.getElementById('myC3').value, myD: document.getElementById('myD3').value, myE: document.getElementById('myE3').value},
-    
+     {myB: document.getElementById('myB3').value, myC:  document.getElementById('myC3').value, myD: document.getElementById('myD3').value, myE: document.getElementById('myE3').value},
+     {myB: document.getElementById('myB3').value, myC:  document.getElementById('myC3').value, myD: document.getElementById('myD3').value, myE: document.getElementById('myE3').value},
+     {myB: document.getElementById('myB3').value, myC:  document.getElementById('myC3').value, myD: document.getElementById('myD3').value, myE: document.getElementById('myE3').value},
+     {myB: document.getElementById('myB3').value, myC:  document.getElementById('myC3').value, myD: document.getElementById('myD3').value, myE: document.getElementById('myE3').value},
+        
   ],
   };   
   
    let j =0;
    let myTempB,myTempC,myTempD,myTempE 
    let myNumberOfItems = parseInt(document.getElementById('myStudentCount').value) 
-   for (let k = 0; k <= myNumberOfItems; k++ ){
+   for (let k = 0; k < myNumberOfItems; k++ ){
       j = k+1;
       myTempB = 'myB'+j
       myTempC = 'myC'+j
@@ -60,8 +64,8 @@ function mySaveData(){
       
      // console.log('j')       
      // console.log(j) 
-     // console.log('myTempB') 
-     // console.log(myTempB) 
+      console.log('myTempB') 
+      console.log(myTempB) 
       
       userData.skills[k].myB = document.getElementById(myTempB).value  
       userData.skills[k].myC = document.getElementById(myTempC).value  
