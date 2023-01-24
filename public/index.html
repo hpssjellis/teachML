@@ -1,4 +1,4 @@
-Version 0.6.0-122
+Version 0.6.0-123
 
 <script>
    
@@ -8,7 +8,7 @@ let myStorage;
 function myLoadData(){
    // make sure things are zeroed
    document.getElementById('myDiv01').innerHTML = ''
-   let myStart = document.getElementById('myStudentCount').value 
+   let myStart = parseInt(document.getElementById('myStudentCount').value) 
    
    //grab the JSON from Local Storage
    myStorage = JSON.parse(localStorage.getItem(document.getElementById('myClassName').value))
