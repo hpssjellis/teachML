@@ -1,4 +1,4 @@
-Version 0.6.1-135
+Version 0.6.1-136
 
 <script>
    
@@ -51,17 +51,17 @@ function mySaveData(){
    let j =0;
    let myTempB,myTempC,myTempD,myTempE 
    let myNumberOfItems = parseInt(document.getElementById('myStudentCount').value) 
-   for (let k = 0; k < myNumberOfItems; k++ ){
+   for (let k = 0; k <= myNumberOfItems; k++ ){
       j = k+1;
       myTempB = 'myB'+j
       myTempC = 'myC'+j
       myTempD = 'myD'+j
       myTempE = 'myE'+j
       
-      console.log('j')       
-      console.log(j) 
-      console.log('myTempB') 
-      console.log(myTempB) 
+     // console.log('j')       
+     // console.log(j) 
+     // console.log('myTempB') 
+     // console.log(myTempB) 
       
       userData.skills[k].myB = document.getElementById(myTempB).value  
       userData.skills[k].myC = document.getElementById(myTempC).value  
