@@ -1,4 +1,4 @@
-Version 0.6.1-125
+Version 0.6.1-126
 
 <script>
    
@@ -48,10 +48,10 @@ function mySaveData(){
   ],
   };   
   
-   
+   let j =0;
    let myNumberOfItems = parseInt(document.getElementById('myStudentCount').value) 
    for (let k = 0; k < myNumberOfItems; k++ ){
-      let j = k+1;
+      j = k+1;
       console.log(j)     
       userData.skills[k] =     '{myB: document.getElementById(\'myB${j}\').value, myC:  document.getElementById(\'myC${j}\').value, myD: document.getElementById(\'myD${j}\').value, myE: document.getElementById(\'myE${j}\').value}'
    }
