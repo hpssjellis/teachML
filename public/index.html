@@ -1,4 +1,4 @@
-Version 0.6.1-126
+Version 0.6.1-127
 
 <script>
    
@@ -52,8 +52,10 @@ function mySaveData(){
    let myNumberOfItems = parseInt(document.getElementById('myStudentCount').value) 
    for (let k = 0; k < myNumberOfItems; k++ ){
       j = k+1;
-      console.log(j)     
-      userData.skills[k] =     '{myB: document.getElementById(\'myB${j}\').value, myC:  document.getElementById(\'myC${j}\').value, myD: document.getElementById(\'myD${j}\').value, myE: document.getElementById(\'myE${j}\').value}'
+      console.log(j) 
+     // userData.skills[k].myB = `document.getElementById('myB${j}').value`  //   '{myB: document.getElementById(\'myB${j}\').value, myC:  document.getElementById(\'myC${j}\').value, myD: document.getElementById(\'myD${j}\').value, myE: document.getElementById(\'myE${j}\').value}'
+      
+      userData.skills[k] =     `{myB: document.getElementById('myB${j}').value, myC:  document.getElementById('myC${j}').value, myD: document.getElementById('myD${j}').value, myE: document.getElementById('myE${j}').value}`
    }
    localStorage.setItem(document.getElementById('myClassName').value, JSON.stringify(userData) )
 }   
