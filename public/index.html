@@ -3,11 +3,7 @@ Version 0.7.0-151
 <script>
    
 let myStorage;
-let myA = new Array()    
-let myB = new Array()    
-let myC = new Array()    
-let myD = new Array()    
-let myE = new Array()    
+ 
    
 function myLoadData(){
 
@@ -204,6 +200,15 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
    document.getElementById('myStudentCount').value = parseInt(document.getElementById('myStudentCount').value)  + 1       
    let myCount = parseInt(document.getElementById('myStudentCount').value)
    
+   // not using let
+   myA = new Array(1)    
+   myB = new Array(1)    
+   myC = new Array(1)    
+   myD = new Array(1)    
+   myE = new Array(1)                                                                         
+                                                                         
+                                                                         
+                                                                         
    // put in a paragraph
    //let myP = document.createElement('p')                                           
    //document.getElementById('myDiv01').appendChild(myP)   
