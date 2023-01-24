@@ -1,4 +1,4 @@
-Version 0.7.0-145
+Version 0.7.0-146
 
 <script>
    
@@ -302,8 +302,8 @@ Learnt Count:<input type=text id="myLearntCount" size=3 value=0>, %:<input type=
 <input type="button" value="Save TextArea" onClick="{
    
    let myStore = JSON.parse(document.getElementById('myText1').value) 
-   document.getElementById('myClassName').value = myStore.classname
-   localStorage.setItem(myStore.classname, document.getElementById('myText1').value)
+   document.getElementById('myClassName').value = myStore.className
+   localStorage.setItem(myStore.className, document.getElementById('myText1').value)
    alert(document.getElementById('myText1').value + ' \nHas been stored')
 
 }">
