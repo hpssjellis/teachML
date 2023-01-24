@@ -1,9 +1,13 @@
-Version 0.7.0-147
+Version 0.7.0-149
 
 <script>
    
 let myStorage;
-
+let myA = new Array(1)    
+let myB = new Array(1)    
+let myC = new Array(1)    
+let myD = new Array(1)    
+let myE = new Array(1)    
    
 function myLoadData(){
 
@@ -41,15 +45,7 @@ function mySaveData(){
   job: 'Programmer',
   amount: parseInt(document.getElementById('myStudentCount').value),
   skills: [ {myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0}
-           //{myB:0,myC:0,myD:0,myE:0},
-  //   {myB: document.getElementById('myB1').value, myC:  document.getElementById('myC1').value, myD: document.getElementById('myD1').value, myE: document.getElementById('myE1').value},
-  //   {myB: document.getElementById('myB2').value, myC:  document.getElementById('myC2').value, myD: document.getElementById('myD2').value, myE: document.getElementById('myE2').value},
-  //   {myB: document.getElementById('myB3').value, myC:  document.getElementById('myC3').value, myD: document.getElementById('myD3').value, myE: document.getElementById('myE3').value},
-   //  {myB: document.getElementById('myB3').value, myC:  document.getElementById('myC3').value, myD: document.getElementById('myD3').value, myE: document.getElementById('myE3').value},
-   //  {myB: document.getElementById('myB3').value, myC:  document.getElementById('myC3').value, myD: document.getElementById('myD3').value, myE: document.getElementById('myE3').value},
-  //   {myB: document.getElementById('myB3').value, myC:  document.getElementById('myC3').value, myD: document.getElementById('myD3').value, myE: document.getElementById('myE3').value},
-   //  {myB: document.getElementById('myB3').value, myC:  document.getElementById('myC3').value, myD: document.getElementById('myD3').value, myE: document.getElementById('myE3').value},
-        
+    
   ],
   };   
   
@@ -65,18 +61,19 @@ function mySaveData(){
       
      // console.log('j')       
      // console.log(j) 
-      console.log('myTempB') 
-      console.log(myTempB) 
+    //  console.log('myTempB') 
+     // console.log(myTempB) 
       
-     // userData.skills[k].myB = document.getElementById(myTempB).value  
-     // userData.skills[k].myC = document.getElementById(myTempC).value  
-     // userData.skills[k].myD = document.getElementById(myTempD).value  
-     // userData.skills[k].myE = document.getElementById(myTempE).value  
+      userData.skills[k].myB = document.getElementById(myTempB).value  
+      userData.skills[k].myC = document.getElementById(myTempC).value  
+      userData.skills[k].myD = document.getElementById(myTempD).value  
+      userData.skills[k].myE = document.getElementById(myTempE).value  
+      
      //userData.push(skills[k])
-      userData.skills[k]['myB'] = document.getElementById(myTempB).value  
-      userData.skills[k]['myC'] = document.getElementById(myTempC).value  
-      userData.skills[k]['myD'] = document.getElementById(myTempD).value  
-      userData.skills[k]['myE'] = document.getElementById(myTempE).value  
+     // userData.skills[k]['myB'] = document.getElementById(myTempB).value  
+     // userData.skills[k]['myC'] = document.getElementById(myTempC).value  
+     // userData.skills[k]['myD'] = document.getElementById(myTempD).value  
+     // userData.skills[k]['myE'] = document.getElementById(myTempE).value  
       
      // userData.skills[k] =     {myB: document.getElementById('myB${j}').value, myC:  document.getElementById('myC${j}').value, myD: document.getElementById('myD${j}').value, myE: document.getElementById('myE${j}').value}
    }
@@ -200,7 +197,7 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
 , Student Count:<input type=text id="myStudentCount" size=6 value=0>
 
 
-<input type=button id="myAddStudentsButton" value="add student" onclick="{
+<input type=button id="myAddStudentsButton" value="Add Student" onclick="{
 
    // Prep the div    
                                                 
@@ -213,7 +210,7 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
    document.getElementById('myDiv01').innerHTML += '<br>'                                              
   
    //add a button    
-   let myA = new Array(1)                                                
+   //let myA = new Array(1)                                                
    myA[myCount]  = document.createElement('input')  
    myA[myCount].setAttribute('type', 'button');                
    myA[myCount].setAttribute('id', 'myA' + myCount);                   
@@ -223,7 +220,7 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
    document.getElementById('myDiv01').appendChild(myA[myCount])     
                                                 
    // add text                                                          
-   let myB = new Array(1) 
+   //let myB = new Array(1) 
    myB[myCount]  = document.createElement('input')   
    myB[myCount].setAttribute('type', 'text');                             
    myB[myCount].setAttribute('id', 'myB' + myCount);                   
@@ -233,7 +230,7 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
    document.getElementById('myDiv01').appendChild(myB[myCount])  
                                                 
    
-   let myE = new Array(1) 
+   //let myE = new Array(1) 
    myE[myCount]  = document.createElement('input')   
    myE[myCount].setAttribute('type', 'text');                             
    myE[myCount].setAttribute('id', 'myE' + myCount);                   
@@ -243,7 +240,7 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
    myE[myCount].setAttribute('Size', '3');                                         
    document.getElementById('myDiv01').appendChild(myE[myCount])                                                
         
-   let myC = new Array(1) 
+   //let myC = new Array(1) 
    myC[myCount]  = document.createElement('input')   
    myC[myCount].setAttribute('type', 'text');                             
    myC[myCount].setAttribute('id', 'myC' + myCount);                   
@@ -254,7 +251,7 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
    document.getElementById('myDiv01').appendChild(myC[myCount])                                                
                                                 
     
-   let myD = new Array(1) 
+   //let myD = new Array(1) 
    myD[myCount]  = document.createElement('input')   
    myD[myCount].setAttribute('type', 'text');                             
    myD[myCount].setAttribute('id', 'myD' + myCount);                   
