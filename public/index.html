@@ -1,4 +1,4 @@
-Version 0.7.1-153
+Version 0.7.1-155
 
 <script>
    
@@ -125,23 +125,7 @@ function myCheckAll(){
 <H4 Align=center>An example of how to train a classroom of students as if they were a Machine Learning Neural Network (kind of)</h4>
 
 
-<h3 onclick="{
-  document.getElementById('myInstructions').style.display = 'block'            
-}">Instructions</h3>
-<div id="myInstructions" onclick="{document.getElementById('myInstructions').style.display = 'none' } ">
 
-<li>Enter a <b>class title</b> and add the correct number of students,<br>
-<li>Then enter their names and estimate the number of repeats to learn a topic<br>
-<li>Have students decide >= 2 other people they can teach the topic to. <br><br>
-<li><b>Save your class</b> to local storage. The class name will get it back<br><br>
-<li>Decide which students will probably pre-learn the material and 
-<li>Click pre-learn and student-pre-teach if appropriate for the class. <br>
-<li>Then click how many times you teach the material and allow students to reteach to their connected students.<br>
-<li>See how many teaching attempts are needed for the whole class to learn the material<br>
-   <br><br>
-<li>This mimics some of the concepts of neural networks.
-<li>Click here to hide these instructions<br>
-</div><br>
 
 
 Case Sensitive: <input id="myClassName" type=text value="ClassName">
@@ -190,7 +174,7 @@ Case Sensitive: <input id="myClassName" type=text value="ClassName">
 
 
 <table border=1>
-   <tr><th>#</th><th>First Name</th><th>Taught</th><th>Repeats Needed</th><th>Will Teach</th></tr>   
+   <tr><th size=16>#</th><thsize=25>First Name</th><th size=5>Taught</th><th size=4>Repeats Needed</th><th size=30>Will Teach</th></tr>   
 </table>
 
 <div id="myDiv01"></div><br><br>
@@ -282,6 +266,59 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0><br>
 Learnt Count:<input type=text id="myLearntCount" size=3 value=0><br>
 Student Count:<input type=text id="myStudentCount" size=6 value=0><br>
 % Can Teach:<input type=text id="myPercent" size=3 value=0><br><br>
+
+
+
+
+<h3 onclick="{
+  document.getElementById('myInstructions').style.display = 'block'            
+}">Instructions</h3>
+<div id="myInstructions" onclick="{document.getElementById('myInstructions').style.display = 'none' } ">
+
+<li>Enter a <b>class title</b> and add the correct number of students, strangely adding students delete previous entries so add the correct number of students first<br>
+<li>Then enter their names and estimate the number of repeats to learn a topic<br>
+<li>Have students decide >= 2 other people they can teach the topic to, once they understand it <br><br>
+<li><b>Save your class</b> to local storage. The class name will get it back<br><br>
+<li>Decide which students will probably pre-learn the material and 
+<li>Click pre-learn and student-pre-teach if appropriate for the class. <br>
+<li>Then click how many times you teach the material or click the button that also allows students to reteach to their connected students.<br>
+<li>See how many teaching attempts are needed for the majority of the class to learn the material<br>
+   <br><br>
+<li>This mimics some of the concepts of neural networks.
+<li>Click here to hide these instructions<br>
+</div><br>
+
+
+
+
+
+
+<h3 onclick="{
+  document.getElementById('myInstructions').style.display = 'block'            
+}">Background</h3>
+<div id="myBackground" onclick="{document.getElementById('myBackground').style.display = 'none' } ">
+   By Jeremy Ellis online <a href="https://twitter.com/rocksetta">@rocksetta</a> High School Robotics and Machine Learning Teacher. BC, Canada.<br>
+   Since the early 1990's I have been coding neural networks, mainly unsuccessfully, 
+   but have improved in the last few years using both <a href="https://www.tensorflow.org/js">TensorflowJS</a> and <a href="https://www.edgeimpulse.com/">EdgeImpulse.com</a> <br>
+   <br>Many people have modelled machine learning as a simplification of how the brain works, but I have had an interest in Machine Learning to help me understand
+   how we learn.<br><br>
+   
+   This website is a way to look at how a classroom and the job of teaching might benefit from using a machine learning approach to learning!
+   Have fun.
+   
+   
+   
+<li>Click here to hide these instructions<br>
+</div><br>
+
+
+
+
+
+
+
+
+
 
 
 
