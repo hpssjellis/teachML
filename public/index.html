@@ -188,9 +188,8 @@ Case Sensitive: <input id="myClassName" type=text value="ClassName">
   document.getElementById('StudentsTeachButton').click()                                                             
 }">
 
+<div id="myDiv01"></div><br><br>
 
-Taught Count:<input type=text id="myTeachCount" size=6 value=0>
-, Student Count:<input type=text id="myStudentCount" size=6 value=0>
 
 
 <input type=button id="myAddStudentsButton" value="Add Student" onclick="{
@@ -262,7 +261,7 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
    myD[myCount].setAttribute('id', 'myD' + myCount);                   
    myD[myCount].setAttribute('name', 'myDname' + myCount);              
    myD[myCount].setAttribute('value', '1,4,8');          
-   myD[myCount].setAttribute('title', 'Teach '+myCount);                           
+   myD[myCount].setAttribute('title', 'Will Teach '+myCount);                           
    document.getElementById('myDiv01').appendChild(myD[myCount])                                                
                                                                                             
                                                   
@@ -272,10 +271,12 @@ Taught Count:<input type=text id="myTeachCount" size=6 value=0>
 }">
 
 
-<div id="myDiv01"></div><br><br>
 
 
-Learnt Count:<input type=text id="myLearntCount" size=3 value=0>, %:<input type=text id="myPercent" size=3 value=0><br><br>
+Taught Count:<input type=text id="myTeachCount" size=6 value=0><br>
+Learnt Count:<input type=text id="myLearntCount" size=3 value=0><br>
+Student Count:<input type=text id="myStudentCount" size=6 value=0><br>
+% Can Teach:<input type=text id="myPercent" size=3 value=0><br><br>
 
 <input type=text id="myShow"  value="1"> or myB1
 
