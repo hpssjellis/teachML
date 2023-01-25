@@ -188,6 +188,11 @@ Case Sensitive: <input id="myClassName" type=text value="ClassName">
   document.getElementById('StudentsTeachButton').click()                                                             
 }">
 
+
+<table border=1>
+   <tr><th>#</th><th>First Name</th><th>Taught</th><th>Repeats Needed</th><th>Will Teach</th></tr>   
+</table>
+
 <div id="myDiv01"></div><br><br>
 
 
@@ -278,23 +283,7 @@ Learnt Count:<input type=text id="myLearntCount" size=3 value=0><br>
 Student Count:<input type=text id="myStudentCount" size=6 value=0><br>
 % Can Teach:<input type=text id="myPercent" size=3 value=0><br><br>
 
-<input type=text id="myShow"  value="1"> or myB1
 
-<input type=button value="Show-Objects-value" onclick="{
-  document.getElementById('myDiv02').innerHTML  = 'id.value: ' + document.getElementById(document.getElementById('myShow').value).value + '<br>'  
-  document.getElementById('myDiv02').innerHTML  += 'id.id: ' + document.getElementById(document.getElementById('myShow').value).id + '<br>'                 
-  document.getElementById('myDiv02').innerHTML  += 'id.name: ' + document.getElementById(document.getElementById('myShow').value).name + '<br>'                                      
-                                          
-}"><br><br>
-
-<input type=button value="Show-Storage" onclick="{
-  document.getElementById('myDiv02').innerHTML  = 'myB.value: ' + myStorage.skills[document.getElementById('myShow').value].myB  + '<br>'  
-  document.getElementById('myDiv02').innerHTML  += 'myC.value: ' + myStorage.skills[document.getElementById('myShow').value].myC  + '<br>'                  
-  document.getElementById('myDiv02').innerHTML  += 'myD.value: ' + myStorage.skills[document.getElementById('myShow').value].myD  + '<br>'                
-  document.getElementById('myDiv02').innerHTML  += 'myE.value: ' + myStorage.skills[document.getElementById('myShow').value].myE  + '<br>'                                         
-                                          
-}"><br><br>
-     
 
 
 <textarea id="myText1" rows=5 cols=70>
