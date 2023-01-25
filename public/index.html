@@ -1,4 +1,4 @@
-Version 0.7.1-155
+Version 0.7.2-156
 
 <script>
    
@@ -128,12 +128,12 @@ function myCheckAll(){
 
 
 
-Case Sensitive: <input id="myClassName" type=text value="ClassName">
+Case Sensitive Class Name: <input id="myClassName" placeholder="ClassName" type=text value="">
 <input type=button value="Load" onclick="myLoadData()">
 <input type=button value="Save" onclick="mySaveData()">
 <br><br><br>
 
-<input id="preTeachList" type=text value="1,2,3,3,3"  title="Enter students here that will probably pre-know or pre-learn the material">
+<input id="preTeachList" type=text value="1,2,3,3,3" placeholder="1,2,3,3,3 title="Enter students here that will probably pre-know or pre-learn the material">
 
 <input type=button value="Students Pre-Learn" onclick="{
   // Everyone on the list gets learning credit
@@ -170,11 +170,11 @@ Case Sensitive: <input id="myClassName" type=text value="ClassName">
   document.getElementById('myTeachButton').click()      
   myCheckAll()  
   document.getElementById('StudentsTeachButton').click()                                                             
-}">
+}"><br><br>
 
 
 <table border=1>
-   <tr><th size=16>#</th><thsize=25>First Name</th><th size=5>Taught</th><th size=4>Repeats Needed</th><th size=30>Will Teach</th></tr>   
+   <tr><th width=16>#</th><th width=25>First Name</th><th width=5>Taught</th><th width=4>Repeats Needed</th><th width=30>Will Teach</th></tr>   
 </table>
 
 <div id="myDiv01"></div><br><br>
@@ -198,9 +198,9 @@ Case Sensitive: <input id="myClassName" type=text value="ClassName">
                                                                          
                                                                          
    // put in a paragraph
-   //let myP = document.createElement('p')                                           
-   //document.getElementById('myDiv01').appendChild(myP)   
-   document.getElementById('myDiv01').innerHTML += '<br>'                                              
+   let myP = document.createElement('p')                                           
+  document.getElementById('myDiv01').appendChild(myP)   
+  // document.getElementById('myDiv01').innerHTML += '<br>'                                              
   
    //add a button    
    //let myA = new Array(1)                                                
