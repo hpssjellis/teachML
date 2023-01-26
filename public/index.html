@@ -1,4 +1,4 @@
-Version 0.9.3-178
+Version 0.9.3-179
 
 <body onload="{
    myStoreClass = localStorage.getItem('myTeachMlClass')
@@ -150,8 +150,13 @@ function myCheckAll(){
 }   
    
 function myCheckStudent(myStudentNumber){
-   document.getElementById('myA' + myStudentNumber).title = myStudentNumber
-   document.getElementById('myA' + myStudentNumber).value = myStudentNumber
+  // document.getElementById('myA' + myStudentNumber).title = myStudentNumber
+   if (myStudentNumber <= 9) {
+       document.getElementById('myA' + myStudentNumber).value = 'Student0' + myStudentNumber + 'cool'
+   } else {
+       document.getElementById('myA' + myStudentNumber).value = 'Student' + myStudentNumber + 'cool'
+   }
+   
   // document.getElementById('myA' + myStudentNumber).style.title = myStudentNumber
    
    /*
