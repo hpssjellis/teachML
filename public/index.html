@@ -1,4 +1,4 @@
-Version 0.9.3-179
+Version 0.9.3-180
 
 <body onload="{
    myStoreClass = localStorage.getItem('myTeachMlClass')
@@ -151,10 +151,28 @@ function myCheckAll(){
    
 function myCheckStudent(myStudentNumber){
   // document.getElementById('myA' + myStudentNumber).title = myStudentNumber
+   
+   let myMaxKids2 = document.getElementById('myStudentCount').value
+   console.log('myMaxKids2')              
+   console.log(myMaxKids2)
+   let myGroups
+   let myTeachMe = ''
+   for (let myOthers = 1; myOthers <= myMaxKids2; myOthers++){
+      myGroups = document.getElementById('myD' + myStudentNumber).value.split
+      console.log(myGroups)
+      if (myGroups.indexOf(myStudentCount) > 0){
+         myTeachMe += myOthers + ','
+      }
+      
+   }
+   
+   
+   
+   
    if (myStudentNumber <= 9) {
-       document.getElementById('myA' + myStudentNumber).value = 'Student0' + myStudentNumber + 'cool'
+       document.getElementById('myA' + myStudentNumber).value = 'Student0' + myStudentNumber + ':' + myTeachMe
    } else {
-       document.getElementById('myA' + myStudentNumber).value = 'Student' + myStudentNumber + 'cool'
+       document.getElementById('myA' + myStudentNumber).value = 'Student' + myStudentNumber + ':' + myTeachMe
    }
    
   // document.getElementById('myA' + myStudentNumber).style.title = myStudentNumber
