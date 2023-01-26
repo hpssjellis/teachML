@@ -1,4 +1,4 @@
-Version 0.9.3-184
+Version 0.9.3-185
 
 <body onload="{
    myStoreClass = localStorage.getItem('myTeachMlClass')
@@ -158,7 +158,9 @@ function myCheckStudent(myStudentNumber){
    for (let myOthers = 1; myOthers <= myMaxKids2; myOthers++){
       myGroups = document.getElementById('myD' + myOthers).value.split(',')
      // console.log(myGroups)
+      console.log(myGroups.indexOf(myStudentNumber))
       if (myGroups.indexOf(myStudentNumber) > 0){
+         
          myTeachMe += myOthers + ','
       }
       
