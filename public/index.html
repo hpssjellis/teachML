@@ -158,7 +158,7 @@ function myCheckStudent(myStudentNumber){
    let myGroups
    let myTeachMe = ''
    for (let myOthers = 1; myOthers <= myMaxKids2; myOthers++){
-      myGroups = document.getElementById('myD' + myStudentNumber).value.split(',')
+      myGroups = document.getElementById('myD' + myOthers).value.split(',')
      // console.log(myGroups)
       if (myGroups.indexOf(myStudentCount) > 0){
          myTeachMe += myOthers + ','
