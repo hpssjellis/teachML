@@ -1,4 +1,4 @@
-Version 0.8.3-169
+Version 0.9.0-170
 
 <body onload="{
    myStoreClass = localStorage.getItem('myTeachMlClass')
@@ -132,7 +132,27 @@ function myCheckAll(){
    
 }   
    
+function myCheckStudent(myStudentNumber){
+   alert(myStudentNumber)
+   /*
+   let myTempRepeatsNeeded3
+   let myTempCount3 
    
+   let myTotalCount = 0;
+   let myTotalStudents = parseInt(document.getElementById('myStudentCount').value) 
+   let myMax3 =  parseInt( document.getElementById('myStudentCount').value )                                          
+   for (let myLoop3 = 1; myLoop3 <= myMax3; myLoop3++){                                            
+       // check if anyone has learnt the material                                               
+       myTempCount3  =  parseInt(document.getElementById('myE'+myLoop3).value)
+       myTempRepeatsNeeded3  = parseInt(document.getElementById('myC'+myLoop3).value)                                            
+                                   
+   }  
+  // document.getElementById('myLearntCount').value = myTotalCount   
+  // document.getElementById('myPercent').value = myTotalCount*100/myTotalStudents 
+   
+   
+   */
+}      
   
 </script>
 
@@ -240,7 +260,8 @@ Percent Who Can Teach the topic: <input type=text id="myPercent" size=3 value=0>
    } else {
       myA[myCount].setAttribute('value', 'Student' + myCount);                                                                      
    }
-   myA[myCount].setAttribute('title', 'Student' + myCount);                                            
+   myA[myCount].setAttribute('title', 'Student' + myCount);            
+   myA[myCount].setAttribute('mouseover', myCheckStudent(myCount));                                             
    document.getElementById('myDiv01').appendChild(myA[myCount])     
                                                 
    // add text                                                          
