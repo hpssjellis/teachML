@@ -172,6 +172,9 @@ function myCheckStudent(myStudentNumber){
        document.getElementById('myA' + myStudentNumber).value = 'Student' + myStudentNumber + ':' + myTeachMe
    }
 
+    if (myTeachMe == '' ) {
+        document.getElementById('myA' + myStudentNumber).style.backgroundColor == 'red'
+    }
 }      
   
 </script>
