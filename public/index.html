@@ -1,4 +1,4 @@
-Version 0.8.1-164
+Version 0.8.2-165
 
 <body onload="{
    myStoreClass = localStorage.getItem('myTeachMlClass')
@@ -198,9 +198,9 @@ Percent Who Can Teach the topic: <input type=text id="myPercent" size=3 value=0>
 
 
 
-<table border=1  style="width:800px">
-   <tr> <th style="width:60px;">#</th> <th style="width:160px;">First Name</th> <th style="width:30px;">Taught</th>
-   <th style="width:30px;">Repeats Needed</th> <th style="width:160px;">Will Teach</th> </tr>   
+<table border=1  style="width:800px;">
+   <tr> <td style="width:60px;">#</td> <td style="width:160px;">First Name</td> <td style="width:30px;">Taught</td>
+   <td style="width:30px;">Repeats Needed</td> <td style="width:160px;">Will Teach</td> </tr>   
 </table>
 
 <div id="myDiv01"></div><br><br>
@@ -233,8 +233,12 @@ Percent Who Can Teach the topic: <input type=text id="myPercent" size=3 value=0>
    myA[myCount]  = document.createElement('input')  
    myA[myCount].setAttribute('type', 'button');                
    myA[myCount].setAttribute('id', 'myA' + myCount);                   
-   myA[myCount].setAttribute('name', 'myAname' + myCount);                
-   myA[myCount].setAttribute('value', 'Student' + myCount); 
+   myA[myCount].setAttribute('name', 'myAname' + myCount);
+   if (myCount <= 9 ) {
+      myA[myCount].setAttribute('value', 'Student ' + myCount); 
+   } else {
+      myA[myCount].setAttribute('value', 'Student' + myCount);                                                                      
+   }
    myA[myCount].setAttribute('title', 'Student' + myCount);                                            
    document.getElementById('myDiv01').appendChild(myA[myCount])     
                                                 
@@ -256,7 +260,7 @@ Percent Who Can Teach the topic: <input type=text id="myPercent" size=3 value=0>
    myE[myCount].setAttribute('name', 'myEname' + myCount);              
    myE[myCount].setAttribute('value', '0');          
    myE[myCount].setAttribute('title', 'Repeat Count '+myCount);   
-   myE[myCount].setAttribute('Size', '3');                                         
+   myE[myCount].setAttribute('Size', '5');                                         
    document.getElementById('myDiv01').appendChild(myE[myCount])                                                
         
    //let myC = new Array(1) 
@@ -266,7 +270,7 @@ Percent Who Can Teach the topic: <input type=text id="myPercent" size=3 value=0>
    myC[myCount].setAttribute('name', 'myCname' + myCount);              
    myC[myCount].setAttribute('value', '5');          
    myC[myCount].setAttribute('title', 'Repeats to Learn '+myCount);     
-   myC[myCount].setAttribute('Size', '3');                                           
+   myC[myCount].setAttribute('Size', '5');                                           
    document.getElementById('myDiv01').appendChild(myC[myCount])                                                
                                                 
     
