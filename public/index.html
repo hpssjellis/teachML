@@ -1,4 +1,4 @@
-Version 0.9.2-175
+Version 0.9.2-176
 
 <body onload="{
    myStoreClass = localStorage.getItem('myTeachMlClass')
@@ -150,6 +150,7 @@ function myCheckAll(){
    
 function myCheckStudent(myStudentNumber){
    document.getElementById('myA' + myStudentNumber).title = myStudentNumber
+   document.getElementById('myA' + myStudentNumber).value = myStudentNumber
   // document.getElementById('myA' + myStudentNumber).style.title = myStudentNumber
    
    /*
