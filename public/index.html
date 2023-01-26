@@ -7,7 +7,11 @@ Version 0.9.1-172
       myLoadData()
     }
               
-  document.getElementById('myA1').click            
+document.getElementById('myA1').addEventListener('click', function() {
+  this.style.backgroundColor = 'red';
+});   
+                                                        
+document.getElementById('myA2').addEventListener('click', myCheckStudent(2));    
               
 }">
 
@@ -142,7 +146,7 @@ function myCheckAll(){
 }   
    
 function myCheckStudent(myStudentNumber){
-   console.log(myStudentNumber)
+   alert(myStudentNumber)
    /*
    let myTempRepeatsNeeded3
    let myTempCount3 
@@ -271,7 +275,7 @@ Percent Who Can Teach the topic: <input type=text id="myPercent" size=3 value=0>
       myA[myCount].setAttribute('value', 'Student' + myCount);                                                                      
    }
    myA[myCount].setAttribute('title', 'Student' + myCount);            
-   myA[myCount].setAttribute('onclick', myCheckStudent(myCount));                                             
+   //myA[myCount].setAttribute('onclick', myCheckStudent(myCount));                                             
    document.getElementById('myDiv01').appendChild(myA[myCount])     
                                                 
    // add text                                                          
