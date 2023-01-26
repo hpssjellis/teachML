@@ -1,9 +1,24 @@
 Version 0.8.1-164
 
+<body onload="{
+   myStoreClass = localStorage.getItem('myTeachMlClass')
+   if(myStoreClass  != null){
+      document.getElementById('myClassName').value = myStoreClass
+    }
+}">
+
+
+
+
+
 <script>
    
 let myStorage;
  
+
+   
+   
+   
    
 function myLoadData(){
 
@@ -128,7 +143,9 @@ function myCheckAll(){
 
 
 
-Case Sensitive Class Name: <input id="myClassName" placeholder="ClassName" type=text value="">
+Case Sensitive Class Name: <input id="myClassName" placeholder="ClassName" type=text value="" onChange="{
+      localStorage.setItem('myTeachMlClass', document.getElementById('myClassName').value) 
+   }">
 <input type=button value="Load" onclick="myLoadData()">
 <input type=button value="Save" onclick="mySaveData()">
 <br><br><br>
@@ -172,9 +189,17 @@ Case Sensitive Class Name: <input id="myClassName" placeholder="ClassName" type=
   document.getElementById('StudentsTeachButton').click()                                                             
 }"><br><br>
 
+   
+
+Taught Count: <input type=text id="myTeachCount" size=6 value=0><br>
+Learnt Count: <input type=text id="myLearntCount" size=3 value=0>
+per Student Count: <input type=text id="myStudentCount" size=6 value=0>
+Percent Who Can Teach the topic: <input type=text id="myPercent" size=3 value=0>%<br><br>
+
+
 
 <table border=1  style="width:800px">
-   <tr> <th style="width:160px;">#</th> <th style="width:160px;">First Name</th> <th style="width:30px;">Taught</th>
+   <tr> <th style="width:60px;">#</th> <th style="width:160px;">First Name</th> <th style="width:30px;">Taught</th>
    <th style="width:30px;">Repeats Needed</th> <th style="width:160px;">Will Teach</th> </tr>   
 </table>
 
@@ -260,13 +285,6 @@ Case Sensitive Class Name: <input id="myClassName" placeholder="ClassName" type=
                                   
 }"> <br>
 
-
-
-
-Taught Count: <input type=text id="myTeachCount" size=6 value=0><br>
-Learnt Count: <input type=text id="myLearntCount" size=3 value=0>
-per Student Count: <input type=text id="myStudentCount" size=6 value=0>
-Percent Who Can Teach the topic: <input type=text id="myPercent" size=3 value=0>%<br>
 
 
 
