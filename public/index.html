@@ -16,6 +16,11 @@ Version 0.9.0-171
    
 let myStorage;
  
+function myBlankClass(){
+   document.getElementById('myClassName').value = 'myNewClass'
+   myStoreClass = localStorage.setItem('myTeachMlClass', document.getElementById('myClassName').value)
+   location = './'
+}
 
    
    
@@ -169,6 +174,7 @@ Case Sensitive Class Name: <input id="myClassName" placeholder="ClassName" type=
    }">
 <input type=button value="Load" onclick="myLoadData()">
 <input type=button value="Save" onclick="mySaveData()">
+<input type=button value="Blank Class" onclick="myBlankClass()">
 <br><br><br>
 
 <input id="preTeachList" type=text value="1,3,3,3,7,12" placeholder="1,3,3,3,7,12" title="Enter students here that will probably pre-know or pre-learn the material">
