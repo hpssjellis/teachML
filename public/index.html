@@ -1,4 +1,4 @@
-Version 0.10.2-193
+Version 0.10.2-194
 
 <body onload="{
    myStoreClass = localStorage.getItem('myTeachMlClass')
@@ -47,7 +47,7 @@ function myLoadData(){
    //grab the JSON from Local Storage
    myStorage = JSON.parse(localStorage.getItem(document.getElementById('myClassName').value))
    if(myStorage  != null){
-      document.getElementById('preTeachList').value = JSON.stringify(myStorage.preTeach) 
+      document.getElementById('preTeachList').value = parseInt(JSON.stringify(myStorage.preTeach)) 
       document.getElementById('myText1').value = JSON.stringify(myStorage) 
       document.getElementById('myDiv02').innerHTML = JSON.stringify(myStorage, null, '<br>')
       let myInStudents = parseInt(myStorage.amount)
