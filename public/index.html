@@ -1,10 +1,13 @@
-Version 0.10.1-188
+Version 0.10.1-189
 
 <body onload="{
    myStoreClass = localStorage.getItem('myTeachMlClass')
    if(myStoreClass  != null){
       document.getElementById('myClassName').value = myStoreClass
       myLoadData()
+    } else {
+        document.getElementById('mySaveTextArea').click()      
+        //mySaveTextArea        
     }
 let myMaxKids = document.getElementById('myStudentCount').value
 console.log('myMaxKids')              
@@ -402,7 +405,7 @@ Total Student Count: <input type=text id="myStudentCount" size=6 value=0>
 </textarea><br>
 
 
-<input type="button" value="Save TextArea" onClick="{
+<input type="button" id="mySaveTextArea" value="Save TextArea" onClick="{
    
    let myStore = JSON.parse(document.getElementById('myText1').value) 
    document.getElementById('myClassName').value = myStore.className
