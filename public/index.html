@@ -137,7 +137,7 @@ function myCheckAll(){
    let myMax3 =  parseInt( document.getElementById('myStudentCount').value )                                          
    for (let myLoop3 = 1; myLoop3 <= myMax3; myLoop3++){                                            
        // check if anyone has learnt the material                                               
-       myTempCount3  =  parseInt(document.getElementById('myE'+myLoop3).value)
+       myTempCount3  =  parseInt(document.getElementById('myE'+myLoop3).value)3,3,3
        myTempRepeatsNeeded3  = parseInt(document.getElementById('myC'+myLoop3).value)                                            
       if ( myTempCount3 >= myTempRepeatsNeeded3 ){
          document.getElementById('myA'+myLoop3).style.backgroundColor = 'lime'  
@@ -195,7 +195,29 @@ Case Sensitive Class Name: <input id="myClassName" placeholder="ClassName" type=
 <input type=button value="Blank Class" onclick="myBlankClass()">
 <br><br><br>
 
-<input id="preTeachList" type=text value="1,3,3,3,7,12" placeholder="1,3,3,3,7,12" title="Enter students here that will probably pre-know or pre-learn the material">
+
+<input type=button id="myTeachButton" value="Teach Topic" onclick="{
+  document.getElementById('myTeachCount').value = parseInt(document.getElementById('myTeachCount').value)  + 1  
+   let myMax =    parseInt( document.getElementById('myStudentCount').value )                                          
+  for (let myLoop = 1; myLoop <= myMax; myLoop++){
+      document.getElementById('myE'+myLoop).value =  parseInt(document.getElementById('myE'+myLoop).value) + 1                                     
+  }
+  myCheckAll()    
+}">
+
+<input type=button  value="Teach, then students teach" onclick="{
+  document.getElementById('myTeachButton').click()      
+  myCheckAll()  
+  document.getElementById('StudentsTeachButton').click()                                                             
+}">
+
+Taught Count: <input type=text id="myTeachCount" size=6 value=0><br><br>
+   
+   
+Students who will pre-learn: <input id="preTeachList" type=text value="1,3,3,3,7,12" placeholder="1,3,3,3,7,12" title="Enter students here that will try to pre-learn the material" onChange="{
+   alert()
+   
+  }">
 
 <input type=button value="Students Pre-Learn" onclick="{
   // Everyone on the list gets learning credit
@@ -203,8 +225,8 @@ Case Sensitive Class Name: <input id="myClassName" placeholder="ClassName" type=
   myCheckAll()    
                                                                                                  
                                                        
-}"><br>
-<input type=button id="StudentsTeachButton" value="Students Teach" onclick="{
+}">
+<input type=button id="StudentsTeachButton" value="Students Teach Other Students" onclick="{
                                                     
    let myMax2 =  parseInt( document.getElementById('myStudentCount').value )                                          
    for (let myLoop2 = 1; myLoop2 <= myMax2; myLoop2++){
@@ -218,23 +240,6 @@ Case Sensitive Class Name: <input id="myClassName" placeholder="ClassName" type=
    myCheckAll()                                                        
 
 }"><br><br>
-
-<input type=button id="myTeachButton" value="Teach Topic" onclick="{
-  document.getElementById('myTeachCount').value = parseInt(document.getElementById('myTeachCount').value)  + 1  
-   let myMax =    parseInt( document.getElementById('myStudentCount').value )                                          
-  for (let myLoop = 1; myLoop <= myMax; myLoop++){
-      document.getElementById('myE'+myLoop).value =  parseInt(document.getElementById('myE'+myLoop).value) + 1                                     
-  }
-  myCheckAll()    
-}">
-
-<input type=button  value="Teach and students teach" onclick="{
-  document.getElementById('myTeachButton').click()      
-  myCheckAll()  
-  document.getElementById('StudentsTeachButton').click()                                                             
-}">
-
-Taught Count: <input type=text id="myTeachCount" size=6 value=0><br><br>
    
    
 Learnt Count: <input type=text id="myLearntCount" size=3 value=0>
