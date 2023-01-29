@@ -1,4 +1,4 @@
-Version 0.11.1-194
+Version 0.11.1-195
 
 <body onload="{
    myStoreClass = localStorage.getItem('myTeachMlClass')
@@ -75,7 +75,7 @@ function mySaveData(){
   myStoreClass = localStorage.setItem('myTeachMlClass', document.getElementById('myClassName').value)
   const userData = {
   className : document.getElementById('myClassName').value,
-  job: document.getElementById('myPreTeachList').value,,
+  job: document.getElementById('myPreTeachList').value,
   amount: parseInt(document.getElementById('myStudentCount').value),
   skills: [ {myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0}
     
@@ -215,21 +215,23 @@ Case Sensitive Class Name: <input id="myClassName" placeholder="ClassName" type=
   document.getElementById('StudentsTeachButton').click()                                                             
 }">
 
-Taught Count: <input type=text id="myTeachCount" size=6 value=0><br><br>
+Taught Count: <input type=text id="myTeachCount" size=6 value=0><br>
    
-   
-Students who will pre-learn: <input id="myPreTeachList" type=text value="1,3,3,3,7,12" placeholder="1,3,3,3,7,12" title="Enter students here that will try to pre-learn the material" onChange="{
-   alert('Click save if you want to keep this new list')   
-}">
+
 
 <input type=button value="Students Pre-Learn" onclick="{
   // Everyone on the list gets learning credit
   myTeach( document.getElementById('preTeachList').value )                                                    
-  myCheckAll()    
-                                                                                                 
+  myCheckAll()                                                                                                     
                                                        
 }">
-<input type=button id="StudentsTeachButton" value="Students Teach Other Students" onclick="{
+   
+      
+<input id="myPreTeachList" type=text value="1,3,3,3,7,12" placeholder="1,3,3,3,7,12" title="Students that will try to pre-learn or re-learn the material" onChange="{
+   alert('Click save if you want to keep this new list')   
+}">
+   
+<input type=button id="StudentsTeachButton" value="Students Teach Others" onclick="{
                                                     
    let myMax2 =  parseInt( document.getElementById('myStudentCount').value )                                          
    for (let myLoop2 = 1; myLoop2 <= myMax2; myLoop2++){
