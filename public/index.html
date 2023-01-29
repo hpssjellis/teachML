@@ -1,4 +1,4 @@
-Version 0.10.2-192
+Version 0.10.2-193
 
 <body onload="{
    myStoreClass = localStorage.getItem('myTeachMlClass')
@@ -159,7 +159,7 @@ function myCheckStudent(myStudentNumber){
    let myMaxKids2 = document.getElementById('myStudentCount').value
    let myGroups
    let myTeachMe = ''
-   for (let myOthers = 1; myOthers <= myMaxKids2; myOthers++){
+   for (let myOthers = 0; myOthers <= myMaxKids2; myOthers++){
       myGroups = document.getElementById('myD' + myOthers).value.split(',')
      // console.log(myGroups)
       console.log(myGroups.indexOf(myStudentNumber))
@@ -171,9 +171,9 @@ function myCheckStudent(myStudentNumber){
    }
 
    if (myStudentNumber <= 9) {
-       document.getElementById('myA' + myStudentNumber).value = 'Student0' + myStudentNumber + ':' + myTeachMe
+       document.getElementById('myA' + myStudentNumber).value = 'Student0' + myStudentNumber + ': ' + myTeachMe
    } else {
-       document.getElementById('myA' + myStudentNumber).value = 'Student' + myStudentNumber + ':' + myTeachMe
+       document.getElementById('myA' + myStudentNumber).value = 'Student' + myStudentNumber + ': ' + myTeachMe
    }
 
     if (myTeachMe == '' ) {
