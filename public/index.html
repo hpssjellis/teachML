@@ -1,4 +1,4 @@
-Version 0.10.2-194
+Version 0.10.1-191
 
 <body onload="{
    myStoreClass = localStorage.getItem('myTeachMlClass')
@@ -6,8 +6,8 @@ Version 0.10.2-194
       document.getElementById('myClassName').value = myStoreClass
       myLoadData()
     } else {
-         // load fake class for demo     
-        document.getElementById('mySaveTextArea').click()            
+        document.getElementById('mySaveTextArea').click()      
+        //mySaveTextArea        
     }
 let myMaxKids = document.getElementById('myStudentCount').value
 console.log('myMaxKids')              
@@ -33,7 +33,7 @@ let myStorage;
 function myBlankClass(){
    document.getElementById('myClassName').value = 'myNewClass'
    myStoreClass = localStorage.setItem('myTeachMlClass', document.getElementById('myClassName').value)
-   location = './'   // reload the page
+   location = './'
 }
 
    
@@ -47,7 +47,6 @@ function myLoadData(){
    //grab the JSON from Local Storage
    myStorage = JSON.parse(localStorage.getItem(document.getElementById('myClassName').value))
    if(myStorage  != null){
-      document.getElementById('preTeachList').value = parseInt(JSON.stringify(myStorage.preTeach)) 
       document.getElementById('myText1').value = JSON.stringify(myStorage) 
       document.getElementById('myDiv02').innerHTML = JSON.stringify(myStorage, null, '<br>')
       let myInStudents = parseInt(myStorage.amount)
@@ -62,7 +61,7 @@ function myLoadData(){
             document.getElementById('myC'+y).value = myStorage.skills[x].myC       
             document.getElementById('myD'+y).value = myStorage.skills[x].myD   
             document.getElementById('myE'+y).value = myStorage.skills[x].myE 
-           / console.log(myStorage.skills[x])
+            console.log(myStorage.skills[x])
 
         } 
          
@@ -75,7 +74,7 @@ function mySaveData(){
   myStoreClass = localStorage.setItem('myTeachMlClass', document.getElementById('myClassName').value)
   const userData = {
   className : document.getElementById('myClassName').value,
-  preTeach: document.getElementById('preTeachList').value,
+  job: 'Programmer',
   amount: parseInt(document.getElementById('myStudentCount').value),
   skills: [ {myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0},{myB:0,myC:0,myD:0,myE:0}
     
@@ -159,7 +158,7 @@ function myCheckStudent(myStudentNumber){
    let myMaxKids2 = document.getElementById('myStudentCount').value
    let myGroups
    let myTeachMe = ''
-   for (let myOthers = 0; myOthers <= myMaxKids2; myOthers++){
+   for (let myOthers = 1; myOthers <= myMaxKids2; myOthers++){
       myGroups = document.getElementById('myD' + myOthers).value.split(',')
      // console.log(myGroups)
       console.log(myGroups.indexOf(myStudentNumber))
@@ -171,9 +170,9 @@ function myCheckStudent(myStudentNumber){
    }
 
    if (myStudentNumber <= 9) {
-       document.getElementById('myA' + myStudentNumber).value = 'Student0' + myStudentNumber + ': ' + myTeachMe
+       document.getElementById('myA' + myStudentNumber).value = 'Student0' + myStudentNumber + ':' + myTeachMe
    } else {
-       document.getElementById('myA' + myStudentNumber).value = 'Student' + myStudentNumber + ': ' + myTeachMe
+       document.getElementById('myA' + myStudentNumber).value = 'Student' + myStudentNumber + ':' + myTeachMe
    }
 
     if (myTeachMe == '' ) {
@@ -217,19 +216,19 @@ Case Sensitive Class Name: <input id="myClassName" placeholder="ClassName" type=
 
 Taught Count: <input type=text id="myTeachCount" size=6 value=0><br><br>
    
+   
+Students who will pre-learn: <input id="preTeachList" type=text value="1,3,3,3,7,12" placeholder="1,3,3,3,7,12" title="Enter students here that will try to pre-learn the material" onChange="{
+   alert()
+   
+  }">
 
-
-<input type=button value="These Students Pre-Learn" onclick="{
+<input type=button value="Students Pre-Learn" onclick="{
   // Everyone on the list gets learning credit
   myTeach( document.getElementById('preTeachList').value )                                                    
   myCheckAll()    
-                                                                                                                                                        
+                                                                                                 
+                                                       
 }">
-      
-<input id="preTeachList" type=text value="1,3,3,3,7,12" placeholder="1,3,3,3,7,12" title="Enter students here that will try to pre-learn the material" onChange="{
-   alert('Click the save button if you want to keep this new list')
-   
-  }">
 <input type=button id="StudentsTeachButton" value="Students Teach Other Students" onclick="{
                                                     
    let myMax2 =  parseInt( document.getElementById('myStudentCount').value )                                          
@@ -253,7 +252,7 @@ Total Student Count: <input type=text id="myStudentCount" size=6 value=0>
 
 
 <table border=1  style="width:800px;">
-   <tr> <td style="width:40px;">Number</td> <td style="width:130px;">First Name</td> <td style="width:25px;">Taught</td>
+   <tr> <td style="width:50px;">Number</td> <td style="width:130px;">First Name</td> <td style="width:25px;">Taught</td>
    <td style="width:25px;">Repeats Needed</td> <td style="width:160px;">Will Teach #</td> </tr>   
 </table>
 
@@ -418,5 +417,4 @@ Total Student Count: <input type=text id="myStudentCount" size=6 value=0>
 
 <div id="myDiv02">...</div><br><br>
 
-                                              
-  
+                       
