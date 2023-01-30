@@ -1,4 +1,4 @@
-Version 0.11.2-199
+Version 0.11.2-200
 
 <body onload="{
    myStoreClass = localStorage.getItem('myTeachMlClass')
@@ -50,7 +50,7 @@ function myLoadData(){
       document.getElementById('myText1').value = JSON.stringify(myStorage) 
       document.getElementById('myDiv02').innerHTML = JSON.stringify(myStorage, null, '<br>')
       let myInStudents = parseInt(myStorage.amount)
-      document.getElementById('myPreTeachList').value =  myStorage.job.slice(1,-1)  // get rid of quotes
+      document.getElementById('myPreTeachList').value =  myStorage.job     //.slice(1,-1)  // get rid of quotes
       if (myInStudents > 0) {
          for (let x = myStart; x < myInStudents+myStart; x++){
             document.getElementById('myAddStudentsButton').click()             
