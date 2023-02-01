@@ -162,7 +162,7 @@ function myCheckStudent(myStudentNumber){
    let myTeachMe = ''
    for (let myOthers = 1; myOthers <= myMaxKids2; myOthers++){
       myGroups = document.getElementById('myD' + myOthers).value.split(',')
-      console.log(myGroups)
+     // console.log(myGroups)
      // console.log(myGroups.indexOf(myStudentNumber))
       if (myGroups.indexOf(myStudentNumber.toString()) > -1){
          
@@ -382,6 +382,8 @@ Total Student Count: <input type=text id="myStudentCount" size=6 value=0>
    but have improved in the last few years using both <a href="https://www.tensorflow.org/js">TensorflowJS</a> and <a href="https://www.edgeimpulse.com/">EdgeImpulse.com</a> <br>
    <br>Many people have modelled machine learning as a simplification of how the brain works, but I have had an interest in Machine Learning to help me understand
    how we learn.<br><br>
+   
+   Note: The code for this page can be viewed by right clicking and choosing view source. It is only a one page Javascript program.<br><br>
    
    This website is a way to look at how a classroom and the job of teaching might benefit from using a machine learning approach to learning!
    Have fun.
