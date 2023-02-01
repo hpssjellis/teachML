@@ -1,4 +1,4 @@
-Version 0.11.2-200
+Version 0.11.2-201
 
 <body onload="{
    myStoreClass = localStorage.getItem('myTeachMlClass')
@@ -132,6 +132,7 @@ function myTeach(myInputList){
     }
 }   
 
+
 function myCheckAll(){
    let myTempRepeatsNeeded3
    let myTempCount3 
@@ -221,7 +222,7 @@ Taught Count: <input type=text id="myTeachCount" size=6 value=0><br>
 
 <input type=button value="Students Pre-Learn" onclick="{
   // Everyone on the list gets learning credit
-  myTeach( document.getElementById('preTeachList').value )                                                    
+  myTeach( document.getElementById('myPreTeachList').value )                                                    
   myCheckAll()                                                                                                     
                                                        
 }">
