@@ -164,7 +164,7 @@ function myCheckStudent(myStudentNumber){
       myGroups = document.getElementById('myD' + myOthers).value.split(',')
      // console.log(myGroups)
       console.log(myGroups.indexOf(myStudentNumber))
-      if (myGroups.indexOf(myStudentNumber.toString()) > 0){
+      if (myGroups.indexOf(myStudentNumber.toString()) > -1){
          
          myTeachMe += myOthers + ','
       }
